@@ -18,8 +18,9 @@ verify that the valid keyword is entered in the keyword field
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
     AdvertisementResource.Click on the advertisement page button
-    AdvertisementResource.Enter the valid Keyword in the keyword box
+    #AdvertisementResource.Enter the valid Keyword in the keyword box
     #AdvertisementResource.verify the keyword based image displayed
+    AdvertisementResource.Number of product displayed
 
 verify that the Invalid keyword is entered in the keyword field
     [Tags]    Invalid_keyword_search
@@ -30,7 +31,6 @@ verify that the Invalid keyword is entered in the keyword field
     AdvertisementResource.Click on the advertisement page button
     Sleep    5
     AdvertisementResource.Enter the invalid Keyword in the keyword box
-    #Sleep    5
     AdvertisementResource.verify the invalid keyword message is displayed
 
 
@@ -40,7 +40,9 @@ Verify the advertisements functionality with dropdownlist order by Relevance
     LoginResource.Fill the Login page
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
+
     AdvertisementResource.Click on the advertisement page button
+    Sleep    5
     AdvertisementResource.Enter the valid Keyword in the keyword box
     AdvertisementResource.Click on the dropdown button Order by
     AdvertisementResource.Select the option relevance

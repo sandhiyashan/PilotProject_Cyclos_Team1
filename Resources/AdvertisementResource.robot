@@ -7,13 +7,15 @@ ${market_title}    xpath://div[@class="side-menu-icon"]//following-sibling::div
 ${Advertisement}    xpath://div[text()='Advertisements']
 ${Advertisement_title}    xpath://div[text()=' Search advertisements ']
 ${keyword}    xpath=(//div[@class='d-flex label-value-value']//input)[1]
-${order_By}    xpath://div[@class="w-100"]//button//div
-${Relevance}    xpath://a[text()="Relevance"]
+${order_By}    xpath://div[@class='w-100 mw-100 text-truncate pr-3']
+${Relevance}    xpath://a[@class="select-option mt-1"]
 ${last_published}    xpath://div[@class="dropdown-menu show"]//a[2]
 ${lowest_price}    xpath://div[@class="dropdown-menu show"]//a[3]
 ${highest_price}    xpath://div[@class="dropdown-menu show"]//a[text()=' Highest price ']
 ${keyword_based}    xpath:(//div[@class="card"])[2]//div[@class="card-body"]
 ${invalid_keyword_message}    xpath:(//div[@class="page-content-body card-body d-flex flex-column"])[3]
+
+${Advertisement_content}    xpath://div[@class="row category-results"]//div
 
 *** Keywords ***
 
@@ -40,7 +42,8 @@ verify the keyword based image displayed
     #Wait Until Element Is Visible   ${keyword_based}
     Element Should Contain    ${keyword_based}     food 
 
-Enter the invalid Keyword in the keyword box    #Wait Until Element Is Visible    ${keyword}
+Enter the invalid Keyword in the keyword box    
+    #Wait Until Element Is Visible    ${keyword}
     Input Text    ${keyword}    12345 
 
 verify the invalid keyword message is displayed
@@ -50,7 +53,8 @@ verify the invalid keyword message is displayed
 
 
 Click on the dropdown button Order by
-    #Wait Until Element Is Visible    ${order_By}
+    #Wait Until Page Contains Element    ${order_By}    10s
+    Wait Until Element Is Visible    ${order_By}
     Click Element    ${order_By}
 
 
@@ -69,9 +73,12 @@ Select the option highest price
 
 
 
+Number of product displayed
+    Wait Until Page Contains Element    ${Advertisement_content}  
+    ${products}=    Get WebElements    ${Advertisement_content}
+    ${product_count}=    Get Length    ${products}
+    Log    Number of products displayed: ${product_count}
 
-
-    
     
 
 
