@@ -4,20 +4,13 @@ Library    SeleniumLibrary
 Resource    HomeResource.robot
 
 *** Variables ***
-${Banking_page_verify}    xpath://div[text()='Banking']
-${Banking_page_keyword}    Banking
 ${Member_acc}    xpath://div[text()='Member account']
 ${Member_acc_keyword_xpath}    xpath://div[text()=' Member account ']
 ${Member_acc_keyword}    Member account
 ${balance_xpath}    xpath://div[@class='status-label col-6 col-sm-3']/following-sibling::div
 ${table_xpath}    xpath://table[@class='table table-hover cursor-pointer']
 
-
-
 *** Keywords ***
-Verify the Banking page is displayed
-    Element Text Should Be    ${Banking_page_verify}    ${Banking_page_keyword}
-
 Verify the Member account page
     Wait Until Element Is Visible    ${Member_acc}
     Click Element   ${Member_acc}
