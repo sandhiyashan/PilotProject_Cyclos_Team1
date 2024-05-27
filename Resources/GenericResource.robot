@@ -9,7 +9,7 @@ ${brower_name}    Chrome
 *** Keywords ***
 
 Open the Browser with URL
-    Create Webdriver    ${browser_name}  
+    Create Webdriver    ${brower_name}  
     Go To       ${url}
     Maximize Browser Window
     Set Selenium Implicit Wait    5
