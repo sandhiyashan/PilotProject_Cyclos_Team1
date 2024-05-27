@@ -9,6 +9,8 @@ ${verify_login}    xpath:(//div[@class="top-title"])[2]
 ${login_btn}    xpath:(//div[@class="ml-2"])[3]
 ${Marketplace}    xpath://div[text()="Marketplace"]
 ${Banking}    xpath://div[text()='Banking']
+${Banking_page_verify}    xpath://div[text()='Banking']
+${Banking_page_keyword}    Banking
 
 *** Keywords ***
 
@@ -34,4 +36,9 @@ Click on the Banking button
     Wait Until Element Is Visible    ${Banking}
     Click Element     ${Banking}
 
-
+Click the Banking Option
+     Wait Until Element Is Visible    ${Banking}   
+     Click Element   ${Banking} 
+     
+Verify the Banking page is displayed
+    Element Text Should Be    ${Banking_page_verify}    ${Banking_page_keyword}
