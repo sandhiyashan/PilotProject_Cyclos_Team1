@@ -1,4 +1,5 @@
 *** Settings ***
+
 Documentation    All the page objects and keywords of Login page
 Library    SeleniumLibrary
 
@@ -26,5 +27,4 @@ check the error message
 
 check the empty field alert
     Element Text Should Be    ${error}    This field is required
-
 
