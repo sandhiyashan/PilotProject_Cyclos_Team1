@@ -27,4 +27,3 @@ check the error message
 check the empty field alert
     Element Text Should Be    ${error}    This field is required
 
-

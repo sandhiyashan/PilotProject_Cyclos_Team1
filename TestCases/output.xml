@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-24T21:20:28.642467" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Register" source="E:\PilotProject_Cyclos_Team1\TestCases\test_register.robot">
-<test id="s1-t1" name="Valid register with all the fields" line="28">
-<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-24T21:20:29.015386" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>${brower_name}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-24T21:20:29.014392" elapsed="3.521184"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-24T21:20:32.536572" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-24T21:20:32.536572" elapsed="2.089905"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-24T21:20:34.626477" elapsed="0.026445"/>
-</kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
@@ -297,55 +276,138 @@ Stacktrace:
 </kw>
 <kw name="verify the registration is successful" owner="RegisterResource">
 <status status="NOT RUN" start="2024-05-24T21:20:46.767714" elapsed="0.000000"/>
+=======
+<status status="PASS" start="2024-05-26T23:31:04.704990" elapsed="0.003641"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:30:59.320187" elapsed="5.388444"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:04.715350" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:04.713178" elapsed="2.304159"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:31:04.713178" elapsed="2.305338"/>
+</kw>
+<kw name="Fill the Login page" owner="LoginResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T23:31:07.020061" elapsed="0.043753"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:07.063814" level="INFO">Typing text 'Sanjay_stark' into text field 'xpath://input[@placeholder="User"]'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:07.063814" elapsed="0.242164"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:07.309349" level="INFO">Typing text 'Sanjay' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:07.309349" elapsed="0.317783"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T23:31:07.627132" elapsed="0.041127"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:07.668259" level="INFO">Clicking element 'xpath://span[text()='Submit']'.</msg>
+<arg>${submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:07.668259" elapsed="0.088719"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:31:07.018516" elapsed="0.738959"/>
+</kw>
+<kw name="Click on the MarketPlace button" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${marketplace}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T23:31:07.759273" elapsed="0.762522"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:08.521795" level="INFO">Clicking element 'css:a[id="menu_marketplace"]'.</msg>
+<arg>${marketplace}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:08.521795" elapsed="0.095667"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:31:07.758721" elapsed="0.858741"/>
+</kw>
+<kw name="verify that the markerplace is open" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${market_title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T23:31:08.619588" elapsed="1.576586"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:10.198032" level="INFO">Verifying element 'xpath://div[@class="side-menu-icon"]//following-sibling::div' contains exact text 'Marketplace'.</msg>
+<arg>${market_title}</arg>
+<arg>Marketplace</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-26T23:31:10.196174" elapsed="0.039565"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:31:08.619588" elapsed="1.616151"/>
+</kw>
+<kw name="Click on the advertisement page button" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Advertisement}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T23:31:10.237270" elapsed="0.028526"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:10.269573" level="INFO">Clicking element 'xpath://div[text()='Advertisements']'.</msg>
+<arg>${Advertisement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:10.269573" elapsed="0.162192"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:31:10.237270" elapsed="0.194495"/>
+</kw>
+<kw name="Enter the valid Keyword in the keyword box" owner="AdvertisementResource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${keyword}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-26T23:31:10.437302" elapsed="0.027100"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:10.464402" level="INFO">Typing text 'food' into text field 'xpath=(//div[@class='d-flex label-value-value']//input)[1]'.</msg>
+<arg>${keyword}</arg>
+<arg>food</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T23:31:10.464402" elapsed="0.258346"/>
+</kw>
+<status status="PASS" start="2024-05-26T23:31:10.437302" elapsed="0.285446"/>
+</kw>
+<kw name="Click on the dropdown button Order by" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-26T23:31:16.154969" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-26T23:31:16.154969" level="FAIL">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</msg>
+<arg>${order_By}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-26T23:31:10.729430" elapsed="5.429891">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${order_By}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-26T23:31:16.159321" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-26T23:31:10.728186" elapsed="5.432186">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Select the option lowest price" owner="AdvertisementResource">
+<status status="NOT RUN" start="2024-05-26T23:31:16.160372" elapsed="0.001341"/>
 </kw>
 <kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-24T21:20:46.771199" elapsed="2.319252"/>
-</kw>
-<status status="PASS" start="2024-05-24T21:20:46.770173" elapsed="2.320278"/>
-</kw>
-<status status="FAIL" start="2024-05-24T21:20:29.012028" elapsed="20.079429">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="checkbox" class="custom-control-input ng-untouched ng-pristine ng-valid" name="" id="id_9"&gt; is not clickable at point (395, 481). Other element would receive the click: ...&lt;label class="custom-control-label" for="id_9"&gt;&lt;/label&gt;
-  (Session info: chrome=125.0.6422.76)
-Stacktrace:
-	GetHandleVerifier [0x00007FF760B31F22+60322]
-	(No symbol) [0x00007FF760AACE99]
-	(No symbol) [0x00007FF760967EBA]
-	(No symbol) [0x00007FF7609BF32E]
-	(No symbol) [0x00007FF7609BCCF2]
-	(No symbol) [0x00007FF7609BA18B]
-	(No symbol) [0x00007FF7609B9356]
-	(No symbol) [0x00007FF7609AB491]
-	(No symbol) [0x00007FF7609DC21A]
-	(No symbol) [0x00007FF7609AADB6]
-	(No symbol) [0x00007FF7609DC430]
-	(No symbol) [0x00007FF7609FBC80]
-	(No symbol) [0x00007FF7609DBFC3]
-	(No symbol) [0x00007FF7609A9617]
-	(No symbol) [0x00007FF7609AA211]
-	GetHandleVerifier [0x00007FF760E4946D+3301613]
-	GetHandleVerifier [0x00007FF760E93693+3605267]
-	GetHandleVerifier [0x00007FF760E89410+3563664]
-	GetHandleVerifier [0x00007FF760BE42F6+790390]
-	(No symbol) [0x00007FF760AB74DF]
-	(No symbol) [0x00007FF760AB33D4]
-	(No symbol) [0x00007FF760AB3562]
-	(No symbol) [0x00007FF760AA2F6F]
-	BaseThreadInitThunk [0x00007FF9BE14257D+29]
-	RtlUserThreadStart [0x00007FF9BF10AA48+40]
-</status>
-</test>
-<doc>Test to Register Page</doc>
-<status status="FAIL" start="2024-05-24T21:20:28.644517" elapsed="20.452082"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-</tag>
-<suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Register">Test Register</stat>
 </suite>
 </statistics>
 <errors>
