@@ -1,171 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-26T23:30:59.048336" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T23:17:05.875598" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Advertisement" source="C:\Cyclos_project\PilotProject_Cyclos_Team1-2\TestCases\test_advertisement.robot">
-<test id="s1-t1" name="Verify the advertisements functionality with dropdownlist order by lowest" line="63">
+<test id="s1-t1" name="verify that the Invalid keyword is entered in the keyword field" line="25">
 <kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:30:59.331239" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-27T23:17:06.048441" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-26T23:30:59.331239" elapsed="2.084807"/>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="1.620353"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:01.416187" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<msg time="2024-05-27T23:17:07.668794" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-26T23:31:01.416187" elapsed="3.248947"/>
+<status status="PASS" start="2024-05-27T23:17:07.668794" elapsed="2.798989"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-26T23:31:04.665134" elapsed="0.039856"/>
+<status status="PASS" start="2024-05-27T23:17:10.467783" elapsed="0.026758"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-26T23:31:04.704990" elapsed="0.003641"/>
+<status status="PASS" start="2024-05-27T23:17:10.494541" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:30:59.320187" elapsed="5.388444"/>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="4.446100"/>
 </kw>
 <kw name="click the login button" owner="LoginResource">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:04.715350" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
+<msg time="2024-05-27T23:17:10.497310" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
 <arg>${login_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:04.713178" elapsed="2.304159"/>
+<status status="PASS" start="2024-05-27T23:17:10.497310" elapsed="1.980311"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:04.713178" elapsed="2.305338"/>
+<status status="PASS" start="2024-05-27T23:17:10.494541" elapsed="1.983080"/>
 </kw>
 <kw name="Fill the Login page" owner="LoginResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${username_locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-26T23:31:07.020061" elapsed="0.043753"/>
+<status status="PASS" start="2024-05-27T23:17:12.479758" elapsed="0.022552"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:07.063814" level="INFO">Typing text 'Sanjay_stark' into text field 'xpath://input[@placeholder="User"]'.</msg>
+<msg time="2024-05-27T23:17:12.502310" level="INFO">Typing text 'Sanjay_stark' into text field 'xpath://input[@placeholder="User"]'.</msg>
 <arg>${username_locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:07.063814" elapsed="0.242164"/>
+<status status="PASS" start="2024-05-27T23:17:12.502310" elapsed="0.135397"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:07.309349" level="INFO">Typing text 'Sanjay' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<msg time="2024-05-27T23:17:12.637707" level="INFO">Typing text 'Sanjay' into text field 'xpath://input[@placeholder="Password"]'.</msg>
 <arg>${password_locator}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:07.309349" elapsed="0.317783"/>
+<status status="PASS" start="2024-05-27T23:17:12.637707" elapsed="0.179307"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${submit_button}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-26T23:31:07.627132" elapsed="0.041127"/>
+<status status="PASS" start="2024-05-27T23:17:12.817572" elapsed="0.026255"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:07.668259" level="INFO">Clicking element 'xpath://span[text()='Submit']'.</msg>
+<msg time="2024-05-27T23:17:12.843827" level="INFO">Clicking element 'xpath://span[text()='Submit']'.</msg>
 <arg>${submit_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:07.668259" elapsed="0.088719"/>
+<status status="PASS" start="2024-05-27T23:17:12.843827" elapsed="0.074058"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:07.018516" elapsed="0.738959"/>
+<status status="PASS" start="2024-05-27T23:17:12.478658" elapsed="0.439227"/>
 </kw>
 <kw name="Click on the MarketPlace button" owner="HomeResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${marketplace}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-26T23:31:07.759273" elapsed="0.762522"/>
+<status status="PASS" start="2024-05-27T23:17:12.918782" elapsed="0.663002"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:08.521795" level="INFO">Clicking element 'css:a[id="menu_marketplace"]'.</msg>
+<msg time="2024-05-27T23:17:13.586839" level="INFO">Clicking element 'css:a[id="menu_marketplace"]'.</msg>
 <arg>${marketplace}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:08.521795" elapsed="0.095667"/>
+<status status="PASS" start="2024-05-27T23:17:13.586839" elapsed="0.055315"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:07.758721" elapsed="0.858741"/>
+<status status="PASS" start="2024-05-27T23:17:12.918277" elapsed="0.723877"/>
 </kw>
 <kw name="verify that the markerplace is open" owner="AdvertisementResource">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${market_title}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-26T23:31:08.619588" elapsed="1.576586"/>
-</kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:10.198032" level="INFO">Verifying element 'xpath://div[@class="side-menu-icon"]//following-sibling::div' contains exact text 'Marketplace'.</msg>
+<msg time="2024-05-27T23:17:13.642820" level="INFO">Verifying element 'xpath://div[@class="side-menu-icon"]//following-sibling::div' contains exact text 'Marketplace'.</msg>
 <arg>${market_title}</arg>
 <arg>Marketplace</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-26T23:31:10.196174" elapsed="0.039565"/>
+<status status="PASS" start="2024-05-27T23:17:13.642820" elapsed="1.351507"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:08.619588" elapsed="1.616151"/>
+<status status="PASS" start="2024-05-27T23:17:13.642820" elapsed="1.352503"/>
 </kw>
 <kw name="Click on the advertisement page button" owner="AdvertisementResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Advertisement}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-26T23:31:10.237270" elapsed="0.028526"/>
+<status status="PASS" start="2024-05-27T23:17:14.995323" elapsed="0.018816"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:10.269573" level="INFO">Clicking element 'xpath://div[text()='Advertisements']'.</msg>
+<msg time="2024-05-27T23:17:15.014139" level="INFO">Clicking element 'xpath://div[text()='Advertisements']'.</msg>
 <arg>${Advertisement}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:10.269573" elapsed="0.162192"/>
+<status status="PASS" start="2024-05-27T23:17:15.014139" elapsed="0.054696"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:10.237270" elapsed="0.194495"/>
+<status status="PASS" start="2024-05-27T23:17:14.995323" elapsed="0.073512"/>
 </kw>
-<kw name="Enter the valid Keyword in the keyword box" owner="AdvertisementResource">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-27T23:17:18.069149" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-27T23:17:15.068835" elapsed="3.000314"/>
+</kw>
+<kw name="Enter the invalid Keyword in the keyword box" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${keyword}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-26T23:31:10.437302" elapsed="0.027100"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.071240" elapsed="0.019570"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:10.464402" level="INFO">Typing text 'food' into text field 'xpath=(//div[@class='d-flex label-value-value']//input)[1]'.</msg>
+<msg time="2024-05-27T23:17:18.090810" level="INFO">Typing text '@#$!' into text field 'xpath=(//div[@class='d-flex label-value-value']//input)[1]'.</msg>
 <arg>${keyword}</arg>
-<arg>food</arg>
+<arg>@#$!</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-26T23:31:10.464402" elapsed="0.258346"/>
+<status status="PASS" start="2024-05-27T23:17:18.090810" elapsed="0.105648"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:10.437302" elapsed="0.285446"/>
+<status status="PASS" start="2024-05-27T23:17:18.070104" elapsed="0.126354"/>
 </kw>
-<kw name="Click on the dropdown button Order by" owner="AdvertisementResource">
+<kw name="verify the invalid keyword error message is displayed" owner="AdvertisementResource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-05-26T23:31:16.154969" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-26T23:31:16.154969" level="FAIL">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</msg>
-<arg>${order_By}</arg>
+<arg>${invalid_keyword_message}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-05-26T23:31:10.729430" elapsed="5.429891">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</status>
+<status status="PASS" start="2024-05-27T23:17:18.196458" elapsed="0.971628"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${order_By}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-26T23:31:16.159321" elapsed="0.000000"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:19.168086" level="INFO">Verifying element 'xpath://div[text()='Invalid keywords']' contains exact text 'Invalid keywords'.</msg>
+<arg>${invalid_keyword_message}</arg>
+<arg>Invalid keywords</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T23:17:19.168086" elapsed="0.014458"/>
 </kw>
-<status status="FAIL" start="2024-05-26T23:31:10.728186" elapsed="5.432186">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</status>
-</kw>
-<kw name="Select the option lowest price" owner="AdvertisementResource">
-<status status="NOT RUN" start="2024-05-26T23:31:16.160372" elapsed="0.001341"/>
+<status status="PASS" start="2024-05-27T23:17:18.196458" elapsed="0.986086"/>
 </kw>
 <kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-26T23:31:16.163486" elapsed="2.264660"/>
+<status status="PASS" start="2024-05-27T23:17:19.183545" elapsed="2.183033"/>
 </kw>
-<status status="PASS" start="2024-05-26T23:31:16.161713" elapsed="2.266433"/>
+<status status="PASS" start="2024-05-27T23:17:19.182544" elapsed="2.184034"/>
 </kw>
-<tag>lowest_price</tag>
-<status status="FAIL" start="2024-05-26T23:30:59.320187" elapsed="19.107959">Element 'xpath://div[@class='w-100 mw-100 text-truncate pr-3']' not visible after 5 seconds.</status>
+<tag>invalid</tag>
+<tag>Retest</tag>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="15.318137"/>
 </test>
 <doc>To validate Advertisement Functionality</doc>
-<status status="FAIL" start="2024-05-26T23:30:59.064074" elapsed="19.364072"/>
+<status status="PASS" start="2024-05-27T23:17:05.875598" elapsed="15.490980"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">lowest_price</stat>
+<stat pass="1" fail="0" skip="0">invalid</stat>
+<stat pass="1" fail="0" skip="0">Retest</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Advertisement">Test Advertisement</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Advertisement">Test Advertisement</stat>
 </suite>
 </statistics>
 <errors>
