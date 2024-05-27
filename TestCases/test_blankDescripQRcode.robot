@@ -20,7 +20,8 @@ Validate the Receive QR code functionality with blank description
      [Documentation]    This checks the qr code with blank description
     [Tags]  valid_ReceiveQRCode
     [Arguments]    ${amount}    ${blank_description}
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceiveQRcodeResources.Verify the Receive qr code page

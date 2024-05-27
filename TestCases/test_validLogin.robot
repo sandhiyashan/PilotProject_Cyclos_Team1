@@ -16,6 +16,7 @@ Valid Login Test case
 *** Keywords ***
 
 Valid Login Test
+    [Tags]    Smoke
     [Arguments]    ${username}    ${password}
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    ${username}    ${password}

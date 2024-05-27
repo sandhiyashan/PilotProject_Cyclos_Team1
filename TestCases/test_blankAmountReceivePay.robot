@@ -22,7 +22,8 @@ Validate the Receive payment functionality with empty amount
     [Documentation]    This checks the Receive payment functionality with empty amount
     [Tags]  invalid_Receive_payment
     [Arguments]    ${user}    ${blank_amount}    ${description}
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page

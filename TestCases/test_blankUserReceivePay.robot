@@ -22,8 +22,8 @@ Validate the Receive payment functionality with empty user data
     [Documentation]    This checks the Receive payment functionality with empty user data
     [Tags]  invalid_Receive_payment
     [Arguments]    ${blank_user}    ${amount}    ${description}
-    LoginResource.Fill the Login page
-    HomeResource.Click the Banking Option
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page
     ReceivePaymentResouce.Fill the receive payment form with data    ${blank_user}    ${amount}    ${description}  

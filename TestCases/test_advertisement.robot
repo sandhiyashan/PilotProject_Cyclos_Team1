@@ -3,10 +3,10 @@ Documentation    To validate Advertisement Functionality
 Library    SeleniumLibrary
 Test Setup    Open the Browser with URL
 Test Teardown    close Browser session
-Resource    C:\\Cyclos_project\\PilotProject_Cyclos_Team1-2\\Resources\\GenericResource.robot
-Resource    C:\\Cyclos_project\\PilotProject_Cyclos_Team1-2\\Resources\\LoginResource.robot
-Resource    C:\\Cyclos_project\\PilotProject_Cyclos_Team1-2\\Resources\\HomeResource.robot
-Resource    C:\\Cyclos_project\\PilotProject_Cyclos_Team1-2\\Resources\\AdvertisementResource.robot
+Resource    ../Resources/GenericResource.robot
+Resource    ../Resources/LoginResource.robot
+Resource    ../Resources/HomeResource.robot
+Resource   ../Resources/AdvertisementResource.robot
 
 
 *** Test Cases ***
@@ -14,7 +14,8 @@ Resource    C:\\Cyclos_project\\PilotProject_Cyclos_Team1-2\\Resources\\Advertis
 verify that the valid keyword is entered in the keyword field
     [Tags]    valid_keyword_search
     LoginResource.click the login button
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
     AdvertisementResource.Click on the advertisement page button
@@ -25,7 +26,8 @@ verify that the valid keyword is entered in the keyword field
 verify that the Invalid keyword is entered in the keyword field
     [Tags]    Invalid_keyword_search
     LoginResource.click the login button
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
     AdvertisementResource.Click on the advertisement page button
@@ -37,7 +39,8 @@ verify that the Invalid keyword is entered in the keyword field
 Verify the advertisements functionality with dropdownlist order by Relevance
     [Tags]    Relevance
     LoginResource.click the login button
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
 
@@ -51,7 +54,8 @@ Verify the advertisements functionality with dropdownlist order by Relevance
 Verify the advertisements functionality with dropdownlist order by last published
     [Tags]    last_published
     LoginResource.click the login button
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
     AdvertisementResource.Click on the advertisement page button
@@ -63,7 +67,8 @@ Verify the advertisements functionality with dropdownlist order by last publishe
 Verify the advertisements functionality with dropdownlist order by lowest
     [Tags]    lowest_price
     LoginResource.click the login button
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
     AdvertisementResource.Click on the advertisement page button
@@ -75,7 +80,8 @@ Verify the advertisements functionality with dropdownlist order by lowest
 Verify the advertisements functionality with dropdownlist order by Highest
     [Tags]    Highest_price
     LoginResource.click the login button
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.verify that the markerplace is open
     AdvertisementResource.Click on the advertisement page button

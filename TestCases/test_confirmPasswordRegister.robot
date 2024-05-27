@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Test to Register Page
 Library    SeleniumLibrary
-Library    DataDriver    file=../TestData/login_data.xlsx    sheet_name=validRegister
+Library    DataDriver    file=../TestData/login_data.xlsx    sheet_name=confirmPassword
 Test Setup    Open the Browser with URL
 Test Teardown    Close Browser Session
 Resource    ../Resources/GenericResource.robot
@@ -16,7 +16,6 @@ valid register Test case
 *** Keywords ***
 
 Valid register with all the fields
-    [Tags]    Smoke
     [Arguments]    ${name}    ${login}    ${email}    ${website}    ${gender}    ${mobile}    ${land_line}    ${address}    ${zip}    ${city}    ${region}    ${password}    ${confirm_password}
     HomeResource.Go to Register Page
     RegisterResource.Verify Register Page opens
@@ -28,5 +27,5 @@ Valid register with all the fields
     RegisterResource.Fill password fields    ${password}    ${confirm_password}
     RegisterResource.Click Registration confirmation checkbox
     RegisterResource.Click submit button
-    RegisterResource.Verify the registration is successful
+    RegisterResource.verification for confirmPassword
 
