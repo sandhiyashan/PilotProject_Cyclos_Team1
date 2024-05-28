@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This checks the Receive payment fubctionality
+Documentation    This checks the Receive payment functionality
 Library    SeleniumLibrary
 Resource    ../Resources/ReceivePaymentResouce.robot
 Resource    ../Resources/GenericResource.robot
@@ -16,15 +16,15 @@ ${amount}
 ${description}
 
 *** Test Cases ***
-Validate Receive payment with data        ${amount}
-    [Tags]  smoke
+Validate Receive payment with empty user data    ${amount}
+    [Tag]    smoke
+    
 *** Keywords ***
 Validate the Receive payment functionality with empty user data
     [Documentation]    This checks the Receive payment functionality with empty user data
-    [Tags]  invalid_Receive_payment
     [Arguments]    ${blank_user}    ${amount}    ${description}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    dharun    1234
+    LoginResource.Fill the login form    demo    1234
     LoginResource.click the login button
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page
