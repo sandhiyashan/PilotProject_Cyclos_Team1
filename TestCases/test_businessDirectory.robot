@@ -20,8 +20,9 @@ Validate Business Directory functionality with valid data    ${valid_keyword}
 To Validate the Business Directory functionality with valid data
     [Documentation]    This checks the Business Directory functionality with valid data
     [Arguments]    ${valid_keyword}
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    demo    1234
+    LoginResource.click the login button
     HomeResource.Click the Marketplace Option
     HomeResource.Verify the Marketplace page is displayed
     BusinessDirectoryResource.Select the option business directory
