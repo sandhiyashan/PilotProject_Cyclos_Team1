@@ -130,14 +130,6 @@ verify the exceed maximun payment error message is dispalyed
     ${actual_error_msg}    Get Text    ${exceed_max_payment_error_msg}
     Should Be Equal    ${actual_error_msg}    ${expected_error_msg}
 
-
-verify the succesfull payment notification
-    Wait Until Element Is Visible    ${successfull_payment_msg}
-    Element Text Should Be    ${successfull_payment_msg}    The payment was successfully processed
-
-    
-
-
 Select the Recurring payment option
     Click Element    ${recurring_payment}
 

@@ -12,7 +12,7 @@ ${Marketplace}    xpath://div[text()="Marketplace"]
 ${Banking}    xpath://div[text()='Banking']
 ${Banking_page_verify}    xpath://div[text()='Banking']
 ${Banking_page_keyword}    Banking
-${Logout}    css:a[aria-label="Logout"]
+${Logout}    xpath://a[@aria-label="Logout"]//icon//*[name()="svg"]
 
 *** Keywords ***
 
@@ -46,6 +46,7 @@ Verify the Banking page is displayed
     Element Text Should Be    ${Banking_page_verify}    ${Banking_page_keyword}
 
 click the logout 
-    Click Link    ${Logout}
+    Wait Until Element Is Visible   ${Logout}
+    Click Element    ${Logout}
 
 
