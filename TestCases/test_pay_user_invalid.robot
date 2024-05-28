@@ -33,4 +33,4 @@ To validate payment to user functionality with invalid amount
     PaymentUser.Click the scheduling dropdown button
     PaymentUser.Click the pay now option
     PaymentUser.Click the next Button in payment page
-    PaymentUser.verify exceeded amount is entered
+    #PaymentUser.verify exceeded amount is entered

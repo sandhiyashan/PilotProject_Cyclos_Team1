@@ -17,7 +17,7 @@ ${amount}    xpath://div[@class="input-group"]//input
 ${invalid_amount_error_msg}    xpath:div[class="invalid-feedback"]
 ${Scheduling}    xpath://button[@title="Pay now"]
 ${pay_now_option}    xpath://a[text()=' Pay now ']
-${next}    xpath://span[text()='Next']
+${next}    xpath://span[text()="Next"]
 
 ${confirm_button}    xpath://span[text()='Confirm']
 ${exceed_max_payment_error_msg}    xpath://div[@class="notification-message"]
@@ -55,9 +55,11 @@ Select the user
 
 
 verify the error message for user to field is given blank
+    Wait Until Element Is Visible    ${to_user_error_msg}
     Element Text Should Be    ${to_user_error_msg}     This field is required
 
 verify the error message for amount field is given blank
+    Wait Until Element Is Visible    ${amount_error_msg}
     Element Text Should Be    ${amount_error_msg}     This field is required
 
 verify exceeded amount is entered
@@ -77,7 +79,7 @@ Click the pay now option
     Click Element    ${pay_now_option}
 
 Click the next Button in payment page
-    Wait Until Element Is Visible    ${next}
+    #Wait Until Element Is Visible    ${next}
     Click Element    ${next}
 
 Click the confirm button in the payment page

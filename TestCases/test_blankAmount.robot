@@ -20,6 +20,7 @@ To validate payment    ${user_name}    ${amount_data}
 
 
 To validate payment to user functionality with amount field is given blank 
+    [Documentation]    verify the amount field is given blank
     [Tags]    Retest
     [Arguments]    ${user_name}
     LoginResource.click the login button

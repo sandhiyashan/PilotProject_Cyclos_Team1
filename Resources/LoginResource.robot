@@ -1,30 +1,26 @@
 *** Settings ***
-
-Documentation    All the page objects and keywords of Login page
+Documentation    All the page object and keyword of Loginpage page
 Library    SeleniumLibrary
 
+
 *** Variables ***
-${username}    css:input[placeholder="User"]
-${password}    css:input[placeholder="Password"]
-${submit_btn}    xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]
-${forgot_pass}    css:a[class="d-block login-margin-top"]
-${alert}    css:div[class="notification-message"]
-${error}    css:div[class="invalid-feedback"]
+${login_button}    xpath:(//div[text()=' Login '])[1]
+${username_locator}    xpath://input[@placeholder="User"]
+${password_locator}    xpath://input[@placeholder="Password"]
+${submit_button}    xpath://span[text()='Submit']
+
+${username}    Sanjay_stark
+${password}    Sanjay
 
 *** Keywords ***
 
-Fill the login form
-    [Arguments]    ${user}    ${pass}
-    Input Text    ${username}    ${user}
-    Input Password    ${password}    ${pass}
-
 click the login button
-    Click Button    ${submit_btn}
+    Click Element    ${login_button}
 
-check the error message
-    Wait Until Element Is Visible    ${alert}
-    Element Text Should Be    ${alert}    The given name / password are incorrect. Please, try again.
+Fill the Login page
+    Wait Until Element Is Visible    ${username_locator}
+    Input Text    ${username_locator}    ${username}
 
-check the empty field alert
-    Element Text Should Be    ${error}    This field is required
-
+    Input Text    ${password_locator}    ${password}
+    Wait Until Element Is Visible    ${submit_button} 
+    Click Element    ${submit_button}
