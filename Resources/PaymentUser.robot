@@ -32,6 +32,8 @@ ${invalid_amount_error_msg}    xpath:div[class="invalid-feedback"]
 ${Scheduling}    xpath://button[@title="Pay now"]
 ${pay_now_option}    xpath://a[text()=' Pay now ']
 
+${next}    xpath://action-button[@class="d-inline-block button"]/button
+
 ${exceed_max_payment_error_msg}    xpath://div[@class="notification-message"]
 ${expected_error_msg}    You have exceeded the maximum of payments per day for the demo network
 
@@ -76,7 +78,8 @@ verify the error message for amount field is given blank
 
 verify exceeded amount is entered
     Wait Until Element Is Visible    ${invalid_amount_error_msg}
-    Element Text Should Be    ${invalid_amount_error_msg}     Amount must be less or equal to 500,00 IU's.
+    ${store}    Get Text    ${invalid_amount_error_msg}
+    Should Be Equal As Strings    ${store}     Amount must be less or equal to 500,00 IU's.
 
 Enter the valid amount in the amount field
     [Arguments]    ${amount_data}
@@ -111,7 +114,7 @@ Click the pay now option
 
 Click the next Button in payment page
     Wait Until Element Is Visible    ${next}
-    Click Element    ${next}
+    Click Button    ${next}
 
 Verify the confirmation page is displayed
     Element Should Be Visible    ${pay_confirm_title}
