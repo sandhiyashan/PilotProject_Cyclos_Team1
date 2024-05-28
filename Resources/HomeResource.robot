@@ -13,6 +13,9 @@ ${Banking}    xpath://div[text()='Banking']
 ${Banking_page_verify}    xpath://div[text()='Banking']
 ${Banking_page_keyword}    Banking
 ${Logout}    xpath://a[@aria-label="Logout"]//icon//*[name()="svg"]
+${Marketplace_Xpath}    xpath://a[@id='menu_marketplace']
+${Marketplace_page_verify}    xpath://div[@class='side-menu-title' and text()=' Marketplace ']
+${Marketplace_page_keyword}    Marketplace
 
 *** Keywords ***
 
@@ -48,5 +51,13 @@ Verify the Banking page is displayed
 click the logout 
     Wait Until Element Is Visible   ${Logout}
     Click Element    ${Logout}
+
+
+Click the Marketplace Option
+     Wait Until Element Is Visible    ${Marketplace_Xpath}   
+     Click Element   ${Marketplace_Xpath} 
+     
+Verify the Marketplace page is displayed
+    Element Text Should Be    ${Marketplace_page_verify}    ${Marketplace_page_keyword}
 
 
