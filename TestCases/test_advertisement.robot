@@ -13,7 +13,7 @@ Resource   ../Resources/AdvertisementResource.robot
 
 verify that the valid keyword is entered in the keyword field
     [Tags]    Smoke
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
@@ -24,8 +24,8 @@ verify that the valid keyword is entered in the keyword field
     AdvertisementResource.verify the keyword based items displayed
 
 verify that the Invalid keyword is entered in the keyword field
-    [Tags]    Retest    invalid
-    LoginResource.click the login button
+    [Tags]    Invalid_keyword_search
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
@@ -39,7 +39,7 @@ verify that the Invalid keyword is entered in the keyword field
 
 Verify the advertisements functionality with dropdownlist order by Relevance
     [Tags]    Smoke
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
@@ -53,7 +53,7 @@ Verify the advertisements functionality with dropdownlist order by Relevance
 
 Verify the advertisements functionality with dropdownlist order by last published
     [Tags]     Smoke
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
@@ -68,7 +68,7 @@ Verify the advertisements functionality with dropdownlist order by last publishe
 
 Verify the advertisements functionality with dropdownlist order by lowest
     [Tags]    Smoke
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
@@ -83,7 +83,7 @@ Verify the advertisements functionality with dropdownlist order by lowest
 
 Verify the advertisements functionality with dropdownlist order by Highest
     [Tags]    Smoke
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
