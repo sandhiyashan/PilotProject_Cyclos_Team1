@@ -9,7 +9,8 @@ Resource    ../Resources/HomeResource.robot
 Resource    ../Resources/PaymentUser.robot
 Library    DataDriver    file=../TestData/payment_to_user_testdata.xlsx    sheet_name=Sheet1
 
-Test Template    To validate payment to user functionality with amount field is given blank 
+Test Template    To validate cancel the Recurring payment
+
 
 
 *** Test Cases ***
@@ -19,11 +20,11 @@ To validate payment    ${user_name}    ${amount_data}
 *** Keywords ***
 
 
-To validate payment to user functionality with amount field is given blank 
-    [Tags]    Retest
-    [Arguments]    ${user_name}
+To validate cancel the Recurring payment
+    [Tags]    Smoke
+    [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    Sanjay_stark    Sanjay
+    LoginResource.Fill the login form    keerthi    keerthisan
     LoginResource.click the login button
     HomeResource.Click on the Banking button
     PaymentUser.verify the Banking page open
@@ -31,7 +32,12 @@ To validate payment to user functionality with amount field is given blank
     PaymentUser.verify the payment to user page open
     PaymentUser.Enter the username in the to user field    ${user_name}
     PaymentUser.Select the user
+    PaymentUser.Enter the valid amount in the amount field    ${amount_data}
+    PaymentUser.Click the scheduling dropdown button
+    PaymentUser.Select the Recurring payment option
+    PaymentUser.Click the process every dropdown list
+    PaymentUser.Select the week in process every dropdown list
     PaymentUser.Click the next Button in payment page
-    PaymentUser.verify the error message for amount field is given blank
-
-
+    PaymentUser.Click the confirm button in the payment page
+    PaymentUser.Click Cancel the recurring payment
+    PaymentUser.verify the cancellation status
