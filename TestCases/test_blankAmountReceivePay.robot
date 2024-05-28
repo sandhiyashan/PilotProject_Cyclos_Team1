@@ -22,6 +22,7 @@ Validate Receive payment with data    ${user}    ${blank_amount}    ${descriptio
 Validate the Receive payment functionality with empty amount
     [Documentation]    This checks the Receive payment functionality with empty amount
     [Arguments]    ${user}    ${blank_amount}    ${description}
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click the Banking Option

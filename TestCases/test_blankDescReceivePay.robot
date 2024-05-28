@@ -5,7 +5,7 @@ Resource    ../Resources/ReceivePaymentResouce.robot
 Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/LoginResource.robot
 Resource    ../Resources/HomeResource.robot
-Library    DataDriver    file=../TestData/receivePay_data.xlsx   sheet_name=blank_amt_data
+Library    DataDriver    file=../TestData/receivePay_data.xlsx   sheet_name=blank_desc_data
 Test Setup    Open the Browser with URL
 Test Teardown    close Browser session
 Test Template    Validate the Receive payment functionality with empty description
