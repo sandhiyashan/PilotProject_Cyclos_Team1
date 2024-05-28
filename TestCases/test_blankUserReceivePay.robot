@@ -16,13 +16,13 @@ ${amount}
 ${description}
 
 *** Test Cases ***
-Validate Receive payment with data        ${amount}
+Validate Receive payment with data    ${blank_user}    ${amount} 
     [Tags]  smoke
 *** Keywords ***
 Validate the Receive payment functionality with empty user data
     [Documentation]    This checks the Receive payment functionality with empty user data
     [Tags]  invalid_Receive_payment
-    [Arguments]    ${blank_user}    ${amount}    ${description}
+    [Arguments]    ${blank_user}    ${amount}    
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234
     LoginResource.click the login button
