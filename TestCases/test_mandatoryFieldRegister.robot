@@ -16,6 +16,7 @@ valid register Test case
 *** Keywords ***
 
 Valid register with mandatory fields
+    [Documentation]    This checks the Register functionality with mandatory fields
     [Tags]    Smoke
     [Arguments]    ${name}    ${login}    ${email}    ${password}    ${confirm_password}
     HomeResource.Go to Register Page

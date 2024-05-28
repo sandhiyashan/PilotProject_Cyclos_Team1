@@ -12,6 +12,8 @@ Test Teardown    close Browser session
 TC_001: Validate the Member Account
     [Documentation]     validate the balance and transaction
     [Tags]    member_account
+
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click the Banking Option

@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 Resource    ../Resources/ReceivePaymentResouce.robot
 Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/LoginResource.robot
+Resource    ../Resources/HomeResource.robot
 Library    DataDriver    file=../TestData/receivePay_data.xlsx   sheet_name=valid_data
 Test Setup    Open the Browser with URL
 Test Teardown    close Browser session
@@ -22,6 +23,7 @@ Validate the Receive payment functionality with valid data
     [Documentation]    This checks the Receive payment functionality with valid data
     [Tags]  valid_Receive_payment
     [Arguments]    ${user}    ${amount}    ${description}
+    HomeResource.Go to Login Page
     LoginResource.click the login button
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button

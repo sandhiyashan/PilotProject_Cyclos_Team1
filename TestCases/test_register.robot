@@ -16,6 +16,7 @@ valid register Test case
 *** Keywords ***
 
 Valid register with all the fields
+    [Documentation]    This checks the Register functionality with valid data
     [Tags]    Smoke
     [Arguments]    ${name}    ${login}    ${email}    ${website}    ${gender}    ${mobile}    ${land_line}    ${address}    ${zip}    ${city}    ${region}    ${password}    ${confirm_password}
     HomeResource.Go to Register Page
