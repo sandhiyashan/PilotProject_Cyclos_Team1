@@ -11,6 +11,7 @@ Resource    ../Resources/MyAdvertisement.robot
 *** Test Cases ***
 
 add new advertisement
+    [Tags]    Smoke 
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
@@ -21,6 +22,7 @@ add new advertisement
     MyAdvertisement.click save button
 
 search advertisement
+    [Tags]    Regression
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button

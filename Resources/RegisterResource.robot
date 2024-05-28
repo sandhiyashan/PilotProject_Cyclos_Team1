@@ -20,10 +20,11 @@ ${city_field}    css:input#city
 ${region_field}    css:input#region
 ${country}    css:button#country
 ${next_btn}    xpath:(//action-button[@class="d-inline-block button"]/button)[3]
+${man_next_btn}    xpath:(//action-button[@class="d-inline-block button"]/button)[2]
 ${password_field}    xpath://input-field[@formcontrolname="value"]/label-value/div/div/input
-${confirm_password}    id:id_8
-${demo_checkbox}    xpath://boolean-field[@class="form-field ng-untouched ng-pristine ng-valid"]/div/input
-${submit_btn}    xpath://span[text()="Submit"]   
+${confirm_password}    xpath://input-field[@formcontrolname="confirmationValue"]/label-value/div/div/input
+${demo_checkbox}    xpath://accept-agreements[@formcontrolname="acceptAgreements"]/div/div/div/boolean-field/div/label
+${submit_btn}    xpath:(//action-button[@class="d-inline-block button"]/button)[1]  
 ${password_validation}    css:li[class="invalid"] 
 ${field_required}    css:div[class="invalid-feedback"]
 ${verify_register}    xpath://div[text()=" User registration "]
@@ -72,8 +73,8 @@ fill password fields
     [Arguments]    ${pass}    ${cpass}
     Input Password    ${password_field}    ${pass}
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
-    #Wait Until Element Is Enabled    ${confirm_password} 
-    #Input Text    ${confirm_password}    ${cpass}
+    Wait Until Element Is Enabled    ${confirm_password} 
+    Input Text    ${confirm_password}    ${cpass}
 
 click Registration confirmation checkbox
     Click Element    ${demo_checkbox}
@@ -89,6 +90,22 @@ verfication for necessary fields
 
 verification for password
     Element Text Should Be    ${password_validation}     At least 4 characters ✗ 
+
+verification for confirmPassword
+    Element Text Should Be    ${field_required}    The passwords don't match
+
+clicking next button for mandatory field
+    Wait Until Element Is Visible    ${man_next_btn}
+    Click Button    ${man_next_btn}
+
+verification for invalid email
+    Element Text Should Be    ${field_required}    This field is invalid
+
+verification for email already exists
+    Element Text Should Be    ${field_required}    E-Mail must be unique.
+
+
+
 
 
     
