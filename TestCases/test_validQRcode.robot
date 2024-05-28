@@ -15,11 +15,10 @@ ${description}
 
 *** Test Cases ***
 Validate Receive QR code with valid data    ${amount}    ${description}
-
+    [Tags]  smoke
 *** Keywords ***
 Validate the Receive QR code functionality with valid data
     [Documentation]    This checks the qr code with valid data
-    [Tags]  valid_ReceiveQRCode
     [Arguments]    ${amount}    ${description}
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123

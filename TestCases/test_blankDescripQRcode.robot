@@ -15,7 +15,7 @@ ${blank_description}
 
 *** Test Cases ***
 Validate Receive QR code with valid data    ${amount}    ${blank_description}
-
+    [Tags]  regression
 *** Keywords ***
 Validate the Receive QR code functionality with blank description
     [Documentation]    This checks the qr code with blank description

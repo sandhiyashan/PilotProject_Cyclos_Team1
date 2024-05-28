@@ -9,22 +9,21 @@ Resource   ../Resources/HomeResource.robot
 Resource    ../Resources/PaymentUser.robot
 Library    DataDriver    file=../TestData/payment_to_user_testdata.xlsx    sheet_name=Sheet1
 
-Test Template    To validate payment to user functionality with invalid amount
+Test Template    To validate payment to user functionality with valid amount
  
-
 
 *** Variables ***
 ${amount_data}
+
 
 *** Test Cases ***
 To validate payment    ${user_name}    ${amount_data} 
     
 
-
 *** Keywords ***
 To validate payment to user functionality with valid amount 
     
-    [Tags]    valid_amount_payment
+    [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     LoginResource.click the login button
     LoginResource.Fill the login form    sandhiyas    Sand@123

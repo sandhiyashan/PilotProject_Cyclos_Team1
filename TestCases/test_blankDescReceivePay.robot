@@ -17,11 +17,10 @@ ${blank_description}
 
 *** Test Cases ***
 Validate Receive payment with data    ${user}    ${amount}    ${blank_description}
-
+    [Tags]  regression
 *** Keywords ***
 Validate the Receive payment functionality with empty description
     [Documentation]    This checks the Receive payment functionality with empty description
-    [Tags]  valid_Receive_payment
     [Arguments]    ${user}    ${amount}    ${blank_description}
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234
@@ -29,5 +28,8 @@ Validate the Receive payment functionality with empty description
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page
-    ReceivePaymentResouce.Fill the receive payment form with data    ${user}    ${amount}    ${blank_description}  
+    ReceivePaymentResouce.Fill the receive payment form with data    ${user}    ${amount}
+    ReceivePaymentResouce.Select the schedule
+    ReceivePaymentResouce.Fill the description    ${blank_description} 
+    ReceivePaymentResouce.Click the next button 
     ReceivePaymentResouce.Verify the confirmation page is displayed
