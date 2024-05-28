@@ -16,7 +16,7 @@ valid register Test case
 *** Keywords ***
 
 Valid register with blank fields
-
+    [Documentation]    This checks the Register functionality with blank fields 
     [Tags]    Regression
     [Arguments]    ${website}    ${gender}    ${mobile}    ${land_line}    ${address}    ${zip}    ${city}    ${region}
     HomeResource.Go to Register Page

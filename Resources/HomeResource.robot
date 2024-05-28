@@ -12,6 +12,7 @@ ${Marketplace}    xpath://div[text()="Marketplace"]
 ${Banking}    xpath://div[text()='Banking']
 ${Banking_page_verify}    xpath://div[text()='Banking']
 ${Banking_page_keyword}    Banking
+${Logout}    css:a[aria-label="Logout"]
 
 *** Keywords ***
 
@@ -43,3 +44,8 @@ Click the Banking Option
      
 Verify the Banking page is displayed
     Element Text Should Be    ${Banking_page_verify}    ${Banking_page_keyword}
+
+click the logout 
+    Click Link    ${Logout}
+
+
