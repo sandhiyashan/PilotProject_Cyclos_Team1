@@ -19,7 +19,8 @@ Validate Receive QR code with valid data    ${blank_amount}    ${blank_descripti
 Validate the Receive QR code functionality with empty data
     [Documentation]    This checks the qr code with blank data
     [Arguments]    ${blank_amount}    ${blank_description}
-    LoginResource.Fill the Login page
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceiveQRcodeResources.Verify the Receive qr code page

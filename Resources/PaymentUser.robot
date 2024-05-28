@@ -28,6 +28,7 @@ ${description}    Monthly Installments
 
 ${Banking_title}    xpath://div[@class="side-menu-header"]//following-sibling::div
 ${select_user}    xpath://div[@class="dropdown-menu show"]//a[1]
+${invalid_amount_error_msg}    xpath:div[class="invalid-feedback"]
 ${Scheduling}    xpath://button[@title="Pay now"]
 ${pay_now_option}    xpath://a[text()=' Pay now ']
 
@@ -72,6 +73,10 @@ verify the error message for user to field is given blank
 
 verify the error message for amount field is given blank
     Element Text Should Be    ${amount_error_msg}     This field is required
+
+verify exceeded amount is entered
+    Wait Until Element Is Visible    ${invalid_amount_error_msg}
+    Element Text Should Be    ${invalid_amount_error_msg}     Amount must be less or equal to 500,00 IU's.
 
 Enter the valid amount in the amount field
     [Arguments]    ${amount_data}
@@ -144,10 +149,12 @@ Select the week in process every dropdown list
 
 
 Click Cancel the recurring payment
+    Wait Until Element Is Visible    ${cancel_recurring_payment}
     Click Element    ${cancel_recurring_payment}
     Click Element    ${confirm_button}
 
 verify the cancellation status
+    Wait Until Element Is Visible     ${cancellation_status}
     Element Text Should Be    ${cancellation_status}    Canceled    
 
 

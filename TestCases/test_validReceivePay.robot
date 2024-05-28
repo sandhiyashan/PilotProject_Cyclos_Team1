@@ -21,7 +21,9 @@ Validate Receive payment with valid data    ${user}    ${amount}    ${descriptio
 Validate the Receive payment functionality with valid data
     [Documentation]    This checks the Receive payment functionality with valid data
     [Arguments]    ${user}    ${amount}    ${description}
-    LoginResource.Fill the Login page
+    LoginResource.click the login button
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page

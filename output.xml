@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T21:54:50.152413" rpa="false" schemaversion="5">
+<suite id="s1" name="PilotProject Cyclos Team1-1" source="E:\PilotProject_Cyclos_Team1-1">
+<suite id="s1-s1" name="TestCases" source="E:\PilotProject_Cyclos_Team1-1\TestCases">
+<suite id="s1-s1-s1" name="Test Advertisement" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot">
+<test id="s1-s1-s1-t1" name="verify that the valid keyword is entered in the keyword field" line="14">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T21:54:50.660554" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T21:54:50.659377" elapsed="2.136082"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T21:54:52.796666" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T21:54:52.796666" elapsed="4.626483"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T21:54:57.423149" elapsed="0.043206"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T21:54:57.466355" elapsed="0.002759"/>
+</kw>
+<status status="PASS" start="2024-05-27T21:54:50.658269" elapsed="6.810845"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-27T21:54:57.470136" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<msg time="2024-05-27T21:55:08.482170" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE9621B0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot</msg>
+<msg time="2024-05-27T21:55:12.577210" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE72BA10&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot</msg>
+<msg time="2024-05-27T21:55:16.656198" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE962900&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot</msg>
+<msg time="2024-05-27T21:55:20.728432" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=51567): Max retries exceeded with url: /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE962960&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-27T21:54:57.470136" elapsed="23.259323">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" start="2024-05-27T21:54:57.469114" elapsed="23.260345">Execution terminated by signal</status>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="NOT RUN" start="2024-05-27T21:55:20.729459" elapsed="0.000000"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<status status="NOT RUN" start="2024-05-27T21:55:20.730529" elapsed="0.000000"/>
+</kw>
+<kw name="Click on the MarketPlace button" owner="HomeResource">
+<status status="NOT RUN" start="2024-05-27T21:55:20.730529" elapsed="0.000000"/>
+</kw>
+<kw name="verify that the markerplace is open" owner="AdvertisementResource">
+<status status="NOT RUN" start="2024-05-27T21:55:20.730529" elapsed="0.000000"/>
+</kw>
+<kw name="Click on the advertisement page button" owner="AdvertisementResource">
+<status status="NOT RUN" start="2024-05-27T21:55:20.731517" elapsed="0.000000"/>
+</kw>
+<kw name="Number of product displayed" owner="AdvertisementResource">
+<status status="NOT RUN" start="2024-05-27T21:55:20.731517" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-05-27T21:55:24.825151" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE98C350&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1</msg>
+<msg time="2024-05-27T21:55:28.925260" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE98C4D0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1</msg>
+<msg time="2024-05-27T21:55:33.010721" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE98C7A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T21:55:20.732516" elapsed="20.685916"/>
+</kw>
+<status status="PASS" start="2024-05-27T21:55:20.732516" elapsed="20.687281"/>
+</kw>
+<tag>valid_keyword_search</tag>
+<status status="FAIL" start="2024-05-27T21:54:50.658269" elapsed="50.761528">Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-t2" name="verify that the Invalid keyword is entered in the keyword field" line="26">
+<tag>Invalid_keyword_search</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.419797" elapsed="0.001317">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-t3" name="Verify the advertisements functionality with dropdownlist order by Relevance" line="39">
+<tag>Relevance</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.422128" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-t4" name="Verify the advertisements functionality with dropdownlist order by last published" line="54">
+<tag>last_published</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.422128" elapsed="0.001579">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-t5" name="Verify the advertisements functionality with dropdownlist order by lowest" line="67">
+<tag>lowest_price</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.423707" elapsed="0.001004">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-t6" name="Verify the advertisements functionality with dropdownlist order by Highest" line="80">
+<tag>Highest_price</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.425707" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>To validate Advertisement Functionality</doc>
+<status status="FAIL" start="2024-05-27T21:54:50.192845" elapsed="51.233858"/>
+</suite>
+<suite id="s1-s1-s2" name="test alreadyExistsEmail" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_alreadyExistsEmail.robot">
+<test id="s1-s1-s2-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.428696" elapsed="0.001004">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.427699" elapsed="0.002001"/>
+</suite>
+<suite id="s1-s1-s3" name="test blankAmountQRcode" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankAmountQRcode.robot">
+<test id="s1-s1-s3-t1" name="Validate Receive QR code with blank amount" line="16">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.431764" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive QR code fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.430766" elapsed="0.001924"/>
+</suite>
+<suite id="s1-s1-s4" name="test blankAmountReceivePay" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankAmountReceivePay.robot">
+<test id="s1-s1-s4-t1" name="Validate Receive payment with data" line="18">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.435679" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive payment fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.434699" elapsed="0.001976"/>
+</suite>
+<suite id="s1-s1-s5" name="test blankDescReceivePay" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankDescReceivePay.robot">
+<test id="s1-s1-s5-t1" name="Validate Receive payment with data" line="18">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.438667" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive payment fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.437671" elapsed="0.001994"/>
+</suite>
+<suite id="s1-s1-s6" name="test blankDescripQRcode" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankDescripQRcode.robot">
+<test id="s1-s1-s6-t1" name="Validate Receive QR code with valid data" line="16">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.441658" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive QR code fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.440661" elapsed="0.001994"/>
+</suite>
+<suite id="s1-s1-s7" name="test blankFieldRegister" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankFieldRegister.robot">
+<test id="s1-s1-s7-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.443650" elapsed="0.001010">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.443650" elapsed="0.001010"/>
+</suite>
+<suite id="s1-s1-s8" name="test blankQRcode" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankQRcode.robot">
+<test id="s1-s1-s8-t1" name="Validate Receive QR code with valid data" line="16">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.446640" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive QR code fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.445644" elapsed="0.001993"/>
+</suite>
+<suite id="s1-s1-s9" name="test blankUserReceivePay" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_blankUserReceivePay.robot">
+<test id="s1-s1-s9-t1" name="Validate Receive payment with data" line="18">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.448633" elapsed="0.000993">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive payment fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.447637" elapsed="0.002987"/>
+</suite>
+<suite id="s1-s1-s10" name="test confirmPasswordRegister" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_confirmPasswordRegister.robot">
+<test id="s1-s1-s10-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.453690" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.452626" elapsed="0.002060"/>
+</suite>
+<suite id="s1-s1-s11" name="test invalidEmailRegister" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_invalidEmailRegister.robot">
+<test id="s1-s1-s11-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.457679" elapsed="0.000918">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.456607" elapsed="0.001990"/>
+</suite>
+<suite id="s1-s1-s12" name="test invalidLogin" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_invalidLogin.robot">
+<test id="s1-s1-s12-t1" name="inValid Login Test" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.460665" elapsed="0.000977">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Login Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.459668" elapsed="0.001974"/>
+</suite>
+<suite id="s1-s1-s13" name="test invalidPasswordRegister" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_invalidPasswordRegister.robot">
+<test id="s1-s1-s13-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.463624" elapsed="0.000956">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.462660" elapsed="0.002919"/>
+</suite>
+<suite id="s1-s1-s14" name="test invalidReceivePay" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_invalidReceivePay.robot">
+<test id="s1-s1-s14-t1" name="Validate Receive payment with data" line="18">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.468760" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive payment fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.466753" elapsed="0.003005"/>
+</suite>
+<suite id="s1-s1-s15" name="test mandatoryFieldRegister" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_mandatoryFieldRegister.robot">
+<test id="s1-s1-s15-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.471751" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.470754" elapsed="0.001993"/>
+</suite>
+<suite id="s1-s1-s16" name="test memberAccount" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_memberAccount.robot">
+<test id="s1-s1-s16-t1" name="TC_001: Validate the Member Account" line="12">
+<doc>validate the balance and transaction</doc>
+<tag>member_account</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.474740" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Member account fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.473744" elapsed="0.002990"/>
+</suite>
+<suite id="s1-s1-s17" name="Test Myadvertisement" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_myadvertisement.robot">
+<test id="s1-s1-s17-t1" name="add new advertisement" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.478730" elapsed="0.000992">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s17-t2" name="search advertisement" line="23">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.480719" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Login Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.477731" elapsed="0.003983"/>
+</suite>
+<suite id="s1-s1-s18" name="Test Payment To User" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_payment_to_user.robot">
+<test id="s1-s1-s18-t1" name="To validate payment" line="20">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.484706" elapsed="0.000992">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>To validate Banking - payment to user Functionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.483705" elapsed="0.002991"/>
+</suite>
+<suite id="s1-s1-s19" name="test receiveQRcode" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_receiveQRcode.robot">
+<test id="s1-s1-s19-t1" name="Validate the Receive QR code functionality with valid data" line="18">
+<doc>To validate the Receive qr code feature</doc>
+<tag>robot:exit</tag>
+<tag>valid_ReceiveQRCode</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.489769" elapsed="0.000989">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s19-t2" name="Validate the Receive QR code functionality with empty data" line="30">
+<doc>To validate the Receive qr code feature</doc>
+<tag>invalid_ReceiveQRCode</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.490758" elapsed="0.000975">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s19-t3" name="Validate the Receive QR code functionality with empty amount data" line="42">
+<doc>To validate the Receive qr code feature</doc>
+<tag>invalid_ReceiveQRCode</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.492680" elapsed="0.001008">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s19-t4" name="Validate the Receive QR code functionality with blank description" line="54">
+<doc>To validate the Receive qr code feature</doc>
+<tag>invalid_ReceiveQRCode</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.493688" elapsed="0.001054">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive QR code fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.487692" elapsed="0.008012"/>
+</suite>
+<suite id="s1-s1-s20" name="Test Register" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_register.robot">
+<test id="s1-s1-s20-t1" name="valid register Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.497658" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.496663" elapsed="0.002988"/>
+</suite>
+<suite id="s1-s1-s21" name="test validLogin" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_validLogin.robot">
+<test id="s1-s1-s21-t1" name="Valid Login Test case" line="13">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.501654" elapsed="0.000994">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Test to Login Page</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.500649" elapsed="0.001999"/>
+</suite>
+<suite id="s1-s1-s22" name="test validQRcode" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_validQRcode.robot">
+<test id="s1-s1-s22-t1" name="Validate Receive QR code with valid data" line="16">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.504641" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive QR code fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.503645" elapsed="0.002989"/>
+</suite>
+<suite id="s1-s1-s23" name="test validReceivePay" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_validReceivePay.robot">
+<test id="s1-s1-s23-t1" name="Validate Receive payment with valid data" line="18">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-05-27T21:55:41.511626" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>This checks the Receive payment fubctionality</doc>
+<status status="FAIL" start="2024-05-27T21:55:41.507630" elapsed="0.004992"/>
+</suite>
+<status status="FAIL" start="2024-05-27T21:54:50.190127" elapsed="51.324488"/>
+</suite>
+<status status="FAIL" start="2024-05-27T21:54:50.154904" elapsed="51.360708"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="32" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+<stat pass="0" fail="1" skip="0">Highest_price</stat>
+<stat pass="0" fail="1" skip="0">Invalid_keyword_search</stat>
+<stat pass="0" fail="3" skip="0">invalid_ReceiveQRCode</stat>
+<stat pass="0" fail="1" skip="0">last_published</stat>
+<stat pass="0" fail="1" skip="0">lowest_price</stat>
+<stat pass="0" fail="1" skip="0">member_account</stat>
+<stat pass="0" fail="1" skip="0">Relevance</stat>
+<stat pass="0" fail="1" skip="0">valid_keyword_search</stat>
+<stat pass="0" fail="1" skip="0">valid_ReceiveQRCode</stat>
+</tag>
+<suite>
+<stat pass="0" fail="32" skip="0" id="s1" name="PilotProject Cyclos Team1-1">PilotProject Cyclos Team1-1</stat>
+<stat pass="0" fail="32" skip="0" id="s1-s1" name="TestCases">PilotProject Cyclos Team1-1.TestCases</stat>
+<stat pass="0" fail="6" skip="0" id="s1-s1-s1" name="Test Advertisement">PilotProject Cyclos Team1-1.TestCases.Test Advertisement</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s2" name="test alreadyExistsEmail">PilotProject Cyclos Team1-1.TestCases.test alreadyExistsEmail</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s3" name="test blankAmountQRcode">PilotProject Cyclos Team1-1.TestCases.test blankAmountQRcode</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s4" name="test blankAmountReceivePay">PilotProject Cyclos Team1-1.TestCases.test blankAmountReceivePay</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s5" name="test blankDescReceivePay">PilotProject Cyclos Team1-1.TestCases.test blankDescReceivePay</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s6" name="test blankDescripQRcode">PilotProject Cyclos Team1-1.TestCases.test blankDescripQRcode</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s7" name="test blankFieldRegister">PilotProject Cyclos Team1-1.TestCases.test blankFieldRegister</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s8" name="test blankQRcode">PilotProject Cyclos Team1-1.TestCases.test blankQRcode</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s9" name="test blankUserReceivePay">PilotProject Cyclos Team1-1.TestCases.test blankUserReceivePay</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s10" name="test confirmPasswordRegister">PilotProject Cyclos Team1-1.TestCases.test confirmPasswordRegister</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s11" name="test invalidEmailRegister">PilotProject Cyclos Team1-1.TestCases.test invalidEmailRegister</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s12" name="test invalidLogin">PilotProject Cyclos Team1-1.TestCases.test invalidLogin</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s13" name="test invalidPasswordRegister">PilotProject Cyclos Team1-1.TestCases.test invalidPasswordRegister</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s14" name="test invalidReceivePay">PilotProject Cyclos Team1-1.TestCases.test invalidReceivePay</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s15" name="test mandatoryFieldRegister">PilotProject Cyclos Team1-1.TestCases.test mandatoryFieldRegister</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s16" name="test memberAccount">PilotProject Cyclos Team1-1.TestCases.test memberAccount</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s17" name="Test Myadvertisement">PilotProject Cyclos Team1-1.TestCases.Test Myadvertisement</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s18" name="Test Payment To User">PilotProject Cyclos Team1-1.TestCases.Test Payment To User</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1-s19" name="test receiveQRcode">PilotProject Cyclos Team1-1.TestCases.test receiveQRcode</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s20" name="Test Register">PilotProject Cyclos Team1-1.TestCases.Test Register</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s21" name="test validLogin">PilotProject Cyclos Team1-1.TestCases.test validLogin</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s22" name="test validQRcode">PilotProject Cyclos Team1-1.TestCases.test validQRcode</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s23" name="test validReceivePay">PilotProject Cyclos Team1-1.TestCases.test validReceivePay</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-27T21:55:08.482170" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE9621B0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot</msg>
+<msg time="2024-05-27T21:55:12.577210" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE72BA10&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot</msg>
+<msg time="2024-05-27T21:55:16.656198" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE962900&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot</msg>
+<msg time="2024-05-27T21:55:20.728432" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=51567): Max retries exceeded with url: /session/fc24b7f2f1f3ae546e2ffcefea277ff1/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE962960&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<msg time="2024-05-27T21:55:24.825151" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE98C350&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1</msg>
+<msg time="2024-05-27T21:55:28.925260" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE98C4D0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1</msg>
+<msg time="2024-05-27T21:55:33.010721" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000188AE98C7A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc24b7f2f1f3ae546e2ffcefea277ff1</msg>
+</errors>
+</robot>
