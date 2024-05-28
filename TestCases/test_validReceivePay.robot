@@ -16,11 +16,10 @@ ${description}
 
 *** Test Cases ***
 Validate Receive payment with valid data    ${user}    ${amount}    ${description}
-
+    [Tags]  smoke
 *** Keywords ***
 Validate the Receive payment functionality with valid data
     [Documentation]    This checks the Receive payment functionality with valid data
-    [Tags]  valid_Receive_payment
     [Arguments]    ${user}    ${amount}    ${description}
     LoginResource.click the login button
     LoginResource.Fill the login form    sandhiyas    Sand@123
@@ -28,5 +27,8 @@ Validate the Receive payment functionality with valid data
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
     ReceivePaymentResouce.Verify the Receive payment page
-    ReceivePaymentResouce.Fill the receive payment form with data    ${user}    ${amount}    ${description}  
+    ReceivePaymentResouce.Fill the receive payment form with data    ${user}    ${amount}
+    ReceivePaymentResouce.Select the schedule
+    ReceivePaymentResouce.Fill the description    ${description} 
+    ReceivePaymentResouce.Click the next button 
     ReceivePaymentResouce.Verify the confirmation page is displayed
