@@ -8,6 +8,7 @@ ${register_btn}    xpath://div[text()=" Register "]
 ${verify_login}    xpath:(//div[@class="top-title"])[2]
 ${login_btn}    xpath:(//div[@class="ml-2"])[3]
 ${Marketplace}    xpath://div[text()="Marketplace"]
+#${Marketplace}    xpath:(//div[@class="menu-container"]//a)[3]
 ${Banking}    xpath://div[text()='Banking']
 ${Banking_page_verify}    xpath://div[text()='Banking']
 ${Banking_page_keyword}    Banking
