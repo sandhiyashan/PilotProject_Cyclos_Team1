@@ -18,7 +18,7 @@ ${blank_description}
 Validate the Receive QR code functionality with valid data
     [Documentation]  To validate the Receive qr code feature
     [Tags]  valid_ReceiveQRCode
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click the Banking Option
@@ -30,7 +30,7 @@ Validate the Receive QR code functionality with valid data
 Validate the Receive QR code functionality with empty data
     [Documentation]  To validate the Receive qr code feature
     [Tags]  invalid_ReceiveQRCode
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click the Banking Option
@@ -42,7 +42,7 @@ Validate the Receive QR code functionality with empty data
 Validate the Receive QR code functionality with empty amount data
     [Documentation]  To validate the Receive qr code feature
     [Tags]  invalid_ReceiveQRCode
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click the Banking Option
@@ -54,7 +54,7 @@ Validate the Receive QR code functionality with empty amount data
 Validate the Receive QR code functionality with blank description
     [Documentation]  To validate the Receive qr code feature
     [Tags]  invalid_ReceiveQRCode
-    LoginResource.click the login button
+    HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click the Banking Option

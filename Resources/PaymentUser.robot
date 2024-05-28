@@ -16,7 +16,6 @@ ${no_of_installments}    xpath://div[@class='d-flex label-value-value']//input[@
 ${first_instal}    xpath://label[@class='custom-control-label' and text()=' Future date ']
 ${future_date}    xpath://div[@class='d-flex label-value-value']//input[@type='date']
 ${descrip_xpath}    xpath://div[@class='d-flex label-value-value']//textarea
-${next}    xpath://span[text()='Next']
 ${pay_confirm_title}    xpath://div[text()=' Payment confirmation ']
 ${confirm_button}    xpath://span[text()='Confirm']
 ${successfull_payment_msg}    xpath://div[@class="notification-message"]//div
@@ -25,12 +24,13 @@ ${amount_data}    10
 ${inst_no}    5  
 ${fut_date}    30-05-2024     
 ${description}    Monthly Installments
-
 ${Banking_title}    xpath://div[@class="side-menu-header"]//following-sibling::div
 ${select_user}    xpath://div[@class="dropdown-menu show"]//a[1]
 ${invalid_amount_error_msg}    xpath:div[class="invalid-feedback"]
 ${Scheduling}    xpath://button[@title="Pay now"]
 ${pay_now_option}    xpath://a[text()=' Pay now ']
+
+${next}    xpath://action-button[@class="d-inline-block button"]/button
 
 ${exceed_max_payment_error_msg}    xpath://div[@class="notification-message"]
 ${expected_error_msg}    You have exceeded the maximum of payments per day for the demo network
@@ -76,7 +76,8 @@ verify the error message for amount field is given blank
 
 verify exceeded amount is entered
     Wait Until Element Is Visible    ${invalid_amount_error_msg}
-    Element Text Should Be    ${invalid_amount_error_msg}     Amount must be less or equal to 500,00 IU's.
+    ${store}    Get Text    ${invalid_amount_error_msg}
+    Should Be Equal As Strings    ${store}     Amount must be less or equal to 500,00 IU's.
 
 Enter the valid amount in the amount field
     [Arguments]    ${amount_data}
@@ -111,7 +112,7 @@ Click the pay now option
 
 Click the next Button in payment page
     Wait Until Element Is Visible    ${next}
-    Click Element    ${next}
+    Click Button    ${next}
 
 Verify the confirmation page is displayed
     Element Should Be Visible    ${pay_confirm_title}
@@ -128,14 +129,6 @@ verify the exceed maximun payment error message is dispalyed
     Wait Until Element Is Visible    ${exceed_max_payment_error_msg}
     ${actual_error_msg}    Get Text    ${exceed_max_payment_error_msg}
     Should Be Equal    ${actual_error_msg}    ${expected_error_msg}
-
-
-verify the succesfull payment notification
-    Wait Until Element Is Visible    ${successfull_payment_msg}
-    Element Text Should Be    ${successfull_payment_msg}    The payment was successfully processed
-
-    
-
 
 Select the Recurring payment option
     Click Element    ${recurring_payment}
