@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T23:17:05.875598" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Advertisement" source="C:\Cyclos_project\PilotProject_Cyclos_Team1-2\TestCases\test_advertisement.robot">
+<test id="s1-t1" name="verify that the Invalid keyword is entered in the keyword field" line="25">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:06.048441" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="1.620353"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:07.668794" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T23:17:07.668794" elapsed="2.798989"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T23:17:10.467783" elapsed="0.026758"/>
+=======
 <robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T15:25:33.767494" rpa="false" schemaversion="5">
 <suite id="s1" name="test alreadyExistsEmail" source="E:\PilotProject_Cyclos_Team1-1\TestCases\test_alreadyExistsEmail.robot">
 <test id="s1-t1" name="valid register Test case" line="13">
@@ -22,6 +43,126 @@
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T23:17:10.494541" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:06.048441" elapsed="4.446100"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:10.497310" level="INFO">Clicking element 'xpath:(//div[text()=' Login '])[1]'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:10.497310" elapsed="1.980311"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:10.494541" elapsed="1.983080"/>
+</kw>
+<kw name="Fill the Login page" owner="LoginResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.479758" elapsed="0.022552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:12.502310" level="INFO">Typing text 'Sanjay_stark' into text field 'xpath://input[@placeholder="User"]'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.502310" elapsed="0.135397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:12.637707" level="INFO">Typing text 'Sanjay' into text field 'xpath://input[@placeholder="Password"]'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.637707" elapsed="0.179307"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.817572" elapsed="0.026255"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:12.843827" level="INFO">Clicking element 'xpath://span[text()='Submit']'.</msg>
+<arg>${submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.843827" elapsed="0.074058"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:12.478658" elapsed="0.439227"/>
+</kw>
+<kw name="Click on the MarketPlace button" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${marketplace}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:12.918782" elapsed="0.663002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:13.586839" level="INFO">Clicking element 'css:a[id="menu_marketplace"]'.</msg>
+<arg>${marketplace}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:13.586839" elapsed="0.055315"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:12.918277" elapsed="0.723877"/>
+</kw>
+<kw name="verify that the markerplace is open" owner="AdvertisementResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:13.642820" level="INFO">Verifying element 'xpath://div[@class="side-menu-icon"]//following-sibling::div' contains exact text 'Marketplace'.</msg>
+<arg>${market_title}</arg>
+<arg>Marketplace</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T23:17:13.642820" elapsed="1.351507"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:13.642820" elapsed="1.352503"/>
+</kw>
+<kw name="Click on the advertisement page button" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Advertisement}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:14.995323" elapsed="0.018816"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:15.014139" level="INFO">Clicking element 'xpath://div[text()='Advertisements']'.</msg>
+<arg>${Advertisement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:15.014139" elapsed="0.054696"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:14.995323" elapsed="0.073512"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-27T23:17:18.069149" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-27T23:17:15.068835" elapsed="3.000314"/>
+</kw>
+<kw name="Enter the invalid Keyword in the keyword box" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${keyword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.071240" elapsed="0.019570"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:18.090810" level="INFO">Typing text '@#$!' into text field 'xpath=(//div[@class='d-flex label-value-value']//input)[1]'.</msg>
+<arg>${keyword}</arg>
+<arg>@#$!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.090810" elapsed="0.105648"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:18.070104" elapsed="0.126354"/>
+</kw>
+<kw name="verify the invalid keyword error message is displayed" owner="AdvertisementResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${invalid_keyword_message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-27T23:17:18.196458" elapsed="0.971628"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T23:17:19.168086" level="INFO">Verifying element 'xpath://div[text()='Invalid keywords']' contains exact text 'Invalid keywords'.</msg>
+<arg>${invalid_keyword_message}</arg>
+<arg>Invalid keywords</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T23:17:19.168086" elapsed="0.014458"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:17:18.196458" elapsed="0.986086"/>
+=======
 <status status="PASS" start="2024-05-27T15:25:40.995645" elapsed="0.010963"/>
 </kw>
 <status status="PASS" start="2024-05-27T15:25:35.863187" elapsed="5.144422"/>
@@ -115,27 +256,16 @@ Without any arguments.</msg>
 <arg>login=abc12345</arg>
 <arg>email=sandhiya110902@gmail.com</arg>
 <status status="PASS" start="2024-05-27T15:25:41.011592" elapsed="8.283539"/>
-</kw>
-<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T15:25:49.296574" elapsed="2.363028"/>
-</kw>
-<status status="PASS" start="2024-05-27T15:25:49.296574" elapsed="2.364056"/>
-</kw>
-<status status="PASS" start="2024-05-27T15:25:35.859486" elapsed="15.801144"/>
-</test>
-<doc>Test to Register Page</doc>
-<status status="PASS" start="2024-05-27T15:25:33.769460" elapsed="17.894149"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">invalid</stat>
+<stat pass="1" fail="0" skip="0">Retest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="test alreadyExistsEmail">test alreadyExistsEmail</stat>
 </suite>
 </statistics>
 <errors>
