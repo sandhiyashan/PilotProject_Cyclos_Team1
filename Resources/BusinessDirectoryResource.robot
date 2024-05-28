@@ -14,7 +14,7 @@ ${order_by_xpath}    xpath://button[@class='form-control text-left custom-select
 ${relevance_option}    xpath://div[@role='listbox']//a[text()='Relevance']
 ${relev_results}    xpath://div[@class='row tiled-results']
 ${expected_relev_res}    shop
-${contact}    xpath:(//div[@class='row tiled-results']//a)[1]
+${contact}    xpath:(//div[@class='row tiled-results']//a)[3]
 ${add_to_contact}    xpath://div[text()='Add to contacts']
 ${add_contact_verify}    xpath://div[text()='Remove from contacts']
 
