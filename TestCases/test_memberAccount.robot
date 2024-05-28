@@ -1,4 +1,3 @@
-
 *** Settings ***
 Documentation    This checks the Member account fubctionality
 Library    SeleniumLibrary
@@ -20,4 +19,3 @@ TC_001: Validate the Member Account
     MemberAccountResource.Verify the Member account page
     MemberAccountResource.Verify the balance
     MemberAccountResource.Assert the transaction data   
-
