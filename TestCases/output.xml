@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T14:57:46.341388" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Logout" source="E:\PilotProject_Cyclos_Team1-5\TestCases\test_logout.robot">
+<test id="s1-t1" name="testcase for logout functionality" line="12">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:46.576626" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T14:57:46.575627" elapsed="2.239560"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:48.815187" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T14:57:48.815187" elapsed="2.197793"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T14:57:51.012980" elapsed="0.045167"/>
+=======
 <robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T12:26:49.913280" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Pay User Invalid" source="C:\Cyclos_project\PilotProject_Cyclos_Team1-3\TestCases\test_pay_user_invalid.robot">
 <test id="s1-t1" name="To validate payment" line="17">
@@ -18,10 +39,85 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2024-05-28T12:26:56.604938" elapsed="0.040966"/>
+
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T14:57:51.058147" elapsed="0.001993"/>
+</kw>
+<status status="PASS" start="2024-05-28T14:57:46.575627" elapsed="4.485507"/>
+</kw>
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-28T14:57:56.062220" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-28T14:57:51.062131" elapsed="5.000089"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:56.064221" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T14:57:56.062220" elapsed="0.127334"/>
+</kw>
+<status status="PASS" start="2024-05-28T14:57:51.061134" elapsed="5.128420"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:56.191551" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T14:57:56.191551" elapsed="0.136671"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:56.329538" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-05-28T14:57:56.365863" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T14:57:56.328222" elapsed="0.117499"/>
+</kw>
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="PASS" start="2024-05-28T14:57:56.190555" elapsed="0.256267"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:56.448264" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T14:57:56.446822" elapsed="0.097905"/>
+</kw>
+<status status="PASS" start="2024-05-28T14:57:56.446822" elapsed="0.098984"/>
+</kw>
+<kw name="click the logout" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Logout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T14:57:56.547239" elapsed="0.749399"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T14:57:57.297637" level="INFO">Clicking element 'xpath://a[@aria-label="Logout"]//icon//*[name()="svg"]'.</msg>
+<arg>${Logout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T14:57:57.296638" elapsed="0.112096"/>
+</kw>
+<status status="PASS" start="2024-05-28T14:57:56.545806" elapsed="0.862928"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T14:57:57.409767" elapsed="2.483607"/>
+</kw>
+<status status="PASS" start="2024-05-28T14:57:57.409767" elapsed="2.483607"/>
+</kw>
+<status status="PASS" start="2024-05-28T14:57:46.575145" elapsed="13.319250"/>
+</test>
+<doc>Test to Logout functionality</doc>
+<status status="PASS" start="2024-05-28T14:57:46.344453" elapsed="13.550942"/>
+=======
 <status status="PASS" start="2024-05-28T12:26:56.647131" elapsed="0.002407"/>
 </kw>
 <status status="PASS" start="2024-05-28T12:26:51.200466" elapsed="5.449072"/>
@@ -1337,19 +1433,6 @@ Without any arguments.</msg>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">invalid</stat>
-<stat pass="1" fail="0" skip="0">Retest</stat>
-</tag>
-<suite>
-</suite>
-</statistics>
-<errors>
-<msg time="2024-05-28T01:12:09.676563" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:13.943369" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6D9A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:17.998046" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6CE90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot</msg>
-<msg time="2024-05-28T01:12:22.104561" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=56205): Max retries exceeded with url: /session/5a96fc58acb6defd9075f92eaa6f9a37/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC6CD70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg time="2024-05-28T01:12:26.559773" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC545C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
-<msg time="2024-05-28T01:12:30.650200" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC561E0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
-<msg time="2024-05-28T01:12:34.755430" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E1CDC56CF0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a96fc58acb6defd9075f92eaa6f9a37</msg>
+
 </errors>
 </robot>
