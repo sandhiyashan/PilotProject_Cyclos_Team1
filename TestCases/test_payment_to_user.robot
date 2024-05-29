@@ -22,10 +22,11 @@ To validate payment    ${user_name}    ${amount_data}
 
 *** Keywords ***
 To validate payment to user functionality with valid amount 
-    
+    [Documentation]    To validate the successfull payment notification
     [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
+    LoginResource.Fill the login form    Sanjay_stark    Sanjay
     LoginResource.click the login button
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
@@ -41,7 +42,6 @@ To validate payment to user functionality with valid amount
     PaymentUser.Click the next Button in payment page
     PaymentUser.Click the confirm button in the payment page
     PaymentUser.verify the succesfull payment notification
-    sleep   5
 
 
 
