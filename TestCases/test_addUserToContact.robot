@@ -20,8 +20,9 @@ Validate add to contact in Business Directory functionality    ${valid_keyword}
 To Validate the add to contact in Business Directory functionality
     [Documentation]    This checks the add to contact in Business Directory functionality
     [Arguments]    ${valid_keyword}
+    HomeResource.Go to Login Page
+    LoginResource.Fill the login form    dharun    1234
     LoginResource.click the login button
-    LoginResource.Fill the login form    demo    1234
     HomeResource.Click the Marketplace Option
     HomeResource.Verify the Marketplace page is displayed
     BusinessDirectoryResource.Select the option business directory
