@@ -28,6 +28,8 @@ To validate payment to user functionality with valid amount
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    Sanjay_stark    Sanjay
     LoginResource.click the login button
+    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.click the login button
     HomeResource.Click on the Banking button
     PaymentUser.verify the Banking page open
     PaymentUser.Select the option payment to user

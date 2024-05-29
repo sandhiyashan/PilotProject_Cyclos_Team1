@@ -7,7 +7,7 @@ Test Teardown    Close Browser Session
 Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/HomeResource.robot
 Resource    ../Resources/RegisterResource.robot
-Test Template    Valid register with all the fields
+Test Template    Valid register with invalid password field
 
 *** Test Cases ***
 valid register Test case
@@ -15,7 +15,9 @@ valid register Test case
 
 *** Keywords ***
 
-Valid register with all the fields
+Valid register with invalid password field
+    [Documentation]    This checks the Register functionality with invalid password
+    [Tags]    Regression
     [Arguments]    ${name}    ${login}    ${email}    ${website}    ${gender}    ${mobile}    ${land_line}    ${address}    ${zip}    ${city}    ${region}    ${password}    ${confirm_password}
     HomeResource.Go to Register Page
     RegisterResource.Verify Register Page opens
