@@ -100,14 +100,21 @@ Verify the advertisements functionality with dropdownlist order by Highest
 
 verify the wishlist functionality
     [Documentation]    To validate the wishlist functionalist
-    [Tags]    Regression    
+    [Tags]    Regression    wishlist
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    Sanjay_stark    Sanjay
     LoginResource.click the login button
     HomeResource.Click on the MarketPlace button
     AdvertisementResource.Click on the advertisement page button
+    Sleep    5
+    AdvertisementResource.Enter the keyword in the search
+    AdvertisementResource.click the element donut
+    AdvertisementResource.click the like button
+    AdvertisementResource.Click on the advertisement page button
+    Sleep    5
     AdvertisementResource.Select the favourite only checkbox
     AdvertisementResource.verify the favourite list contains favorite item
+    
 
 
     

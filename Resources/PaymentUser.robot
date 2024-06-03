@@ -72,9 +72,11 @@ Select the user
 
 
 verify the error message for user to field is given blank
+    Wait Until Element Is Visible    ${to_user_error_msg}
     Element Text Should Be    ${to_user_error_msg}     This field is required
 
 verify the error message for amount field is given blank
+    Wait Until Element Is Visible    ${amount_error_msg}
     Element Text Should Be    ${amount_error_msg}     This field is required
 
 verify exceeded amount is entered

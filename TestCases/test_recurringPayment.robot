@@ -7,7 +7,7 @@ Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/LoginResource.robot
 Resource    ../Resources/HomeResource.robot
 Resource    ../Resources/PaymentUser.robot
-Library    DataDriver    file=../TestData/payment_to_user_testdata.xlsx    sheet_name=Sheet1
+Library    DataDriver    file=../TestData/payment_to_user_testdata.xlsx    sheet_name=Sheet3
 
 Test Template    To validate the payment to user functionality with Recurring payment
 
@@ -23,7 +23,7 @@ To validate the payment to user functionality with Recurring payment
     [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    Dinesh_dk    Dinesh_dk
+    LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the Banking button
     PaymentUser.verify the Banking page open

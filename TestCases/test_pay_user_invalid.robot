@@ -20,7 +20,7 @@ To validate payment    ${user_name}    ${exceeded_amount_data}
 
 To validate payment to user functionality with invalid amount
     [Documentation]    To validate the Exceeded amount is entered
-    [Tags]    Smoke
+    [Tags]    Smoke 
     [Arguments]    ${user_name}    ${exceeded_amount_data}
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    Sanjay_stark    Sanjay
