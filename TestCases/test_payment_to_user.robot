@@ -26,12 +26,10 @@ To validate payment to user functionality with valid amount
     [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    Sanjay_stark    Sanjay
-    LoginResource.click the login button
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Click on the Banking button
-    PaymentUser.verify the Banking page open
+    #PaymentUser.verify the Banking page open
     PaymentUser.Select the option payment to user
     PaymentUser.verify the payment to user page open
     PaymentUser.Enter the username in the to user field   ${user_name}

@@ -25,6 +25,8 @@ ${donut}    xpath://div[text()=" Donuts "]
 ${relevance_item}    xpath:(//div[text()=" Orange "])[1]
 ${lowest_price_item}    xpath://div[text()=" Java Development Course "]
 ${highest_price_item}    xpath://div[text()=" test1 "]
+${like_button}    xpath://div[text()='Add to favorites']
+
 
 *** Keywords ***
 
@@ -111,3 +113,16 @@ Select the favourite only checkbox
 verify the favourite list contains favorite item
     Element Text Should Be    ${donut}     Donuts 
 
+
+
+Enter the keyword in the search 
+    Wait Until Element Is Visible    ${keyword}
+    Input Text    ${keyword}    donut
+
+click the element donut
+    Wait Until Element Is Visible    ${donut}
+    Click Element    ${donut}
+
+click the like button
+    Wait Until Element Is Visible    ${like_button}
+    Click Element    ${like_button}

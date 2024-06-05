@@ -7,7 +7,7 @@ Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/LoginResource.robot
 Resource    ../Resources/HomeResource.robot
 Resource    ../Resources/PaymentUser.robot
-Library    DataDriver    file=../TestData/payment_to_user_testdata.xlsx    sheet_name=Sheet1
+Library    DataDriver    file=../TestData/payment_to_user_testdata.xlsx    sheet_name=Sheet3
 
 Test Template    To validate cancel the Recurring payment
 
@@ -21,10 +21,11 @@ To validate payment    ${user_name}    ${amount_data}
 
 
 To validate cancel the Recurring payment
+    [Documentation]    To verify that the recurring payment is cancelled 
     [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    keerthi    keerthisan
+    LoginResource.Fill the login form    Dinesh_dk    Dinesh_dk
     LoginResource.click the login button
     HomeResource.Click on the Banking button
     PaymentUser.verify the Banking page open
