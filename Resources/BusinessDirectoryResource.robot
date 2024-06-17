@@ -10,6 +10,7 @@ ${business_dir_title_verify}     Business directory
 ${input_key}    xpath://div[@class='d-flex label-value-value']/input
 ${key_error_msg}    xpath://div[text()=' No results match the search criteria  ']
 ${key_error_alert}    xpath://div[@class='notification-message']
+${alert_text}    Invalid keywords
 ${order_by_xpath}    xpath://button[@class='form-control text-left custom-select w-100']
 ${relevance_option}    xpath://div[@role='listbox']//a[text()='Relevance']
 ${relev_results}    xpath://div[@class='row tiled-results']
@@ -31,7 +32,8 @@ Enter the key in keyword field
     Input Text    ${input_key}    ${keyword}
 
 Verify the invalid key alert
-    Alert Should Be Present    ${key_error_alert}
+    Wait Until Element Is Visible    ${key_error_alert}
+    Element Text Should Be    ${key_error_alert}    ${alert_text}
 
 Verify the invalid error message
     Element Should Be Visible    ${key_error_msg}
