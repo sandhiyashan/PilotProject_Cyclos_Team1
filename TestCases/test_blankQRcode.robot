@@ -15,11 +15,12 @@ ${blank_description}
 
 *** Test Cases ***
 Validate Receive QR code with valid data    ${blank_amount}    ${blank_description}
-    [Tags]  smoke
+    
 *** Keywords ***
 Validate the Receive QR code functionality with empty data
     [Documentation]    This checks the qr code with blank data
     [Arguments]    ${blank_amount}    ${blank_description}
+    [Tags]  smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button

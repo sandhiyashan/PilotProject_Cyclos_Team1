@@ -20,14 +20,14 @@ ${Marketplace_page_keyword}    Marketplace
 *** Keywords ***
 
 Go to Register Page
-    Sleep    5s
+    Wait Until Element Is Visible    ${register_btn}
     Click Element    ${register_btn}
 
 verify the login
     Element Text Should Be    ${verify_login}    Cyclos
 
 Go to Login Page
-    Sleep    5s
+    Wait Until Element Is Visible    ${login_btn}
     Click Element    ${login_btn}
 
 Go to MarketPlace Page

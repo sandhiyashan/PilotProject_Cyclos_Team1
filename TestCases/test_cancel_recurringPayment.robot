@@ -25,7 +25,7 @@ To validate cancel the Recurring payment
     [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    Dinesh_dk    Dinesh_dk
+    LoginResource.Fill the login form    kavi123    kavitha
     LoginResource.click the login button
     HomeResource.Click on the Banking button
     PaymentUser.verify the Banking page open

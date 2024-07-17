@@ -103,15 +103,3 @@ verification for invalid email
 
 verification for email already exists
     Element Text Should Be    ${field_required}    E-Mail must be unique.
-
-
-
-
-
-    
-    
-    
-    
-
-    
-

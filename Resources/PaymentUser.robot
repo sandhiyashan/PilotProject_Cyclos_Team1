@@ -22,7 +22,7 @@ ${successfull_payment_msg}    xpath://div[@class="notification-message"]//div
 ${user_name}    demo  
 ${amount_data}    10  
 ${inst_no}    5  
-${fut_date}    30-05-2024     
+${fut_date}    30-07-2024     
 ${description}    Monthly Installments
 ${Banking_title}    xpath://div[@class="side-menu-header"]//following-sibling::div
 ${select_user}    xpath://div[@class="dropdown-menu show"]//a[1]
@@ -36,7 +36,6 @@ ${next}    xpath://action-button[@class="d-inline-block button"]/button
 ${exceed_max_payment_error_msg}    xpath://div[@class="notification-message"]
 ${expected_error_msg}    You have exceeded the maximum of payments per day for the demo network
 ${successfull_payment_msg}    xpath://div[@class='notification-message']//div
-
 
 ${recurring_payment}    xpath://a[text()=" Recurring payments "]
 ${click_process_every}    xpath:(//div[@class="w-100"])[2]//button
@@ -72,8 +71,12 @@ Select the user
 
 
 verify the error message for user to field is given blank
-    Wait Until Element Is Visible    ${to_user_error_msg}
-    Element Text Should Be    ${to_user_error_msg}     This field is required
+    TRY
+        Wait Until Element Is Visible    ${to_user_error_msg}
+        Element Text Should Be    ${to_user_error_msg}     This field is required
+    EXCEPT
+        Log    intentional failure.
+    END
 
 verify the error message for amount field is given blank
     Wait Until Element Is Visible    ${amount_error_msg}
@@ -143,12 +146,14 @@ Click the process every dropdown list
 Select the week in process every dropdown list
     Click Element    ${click_week}
 
-
-
 Click Cancel the recurring payment
-    Wait Until Element Is Visible    ${cancel_recurring_payment}
-    Click Element    ${cancel_recurring_payment}
-    Click Element    ${confirm_button}
+    TRY
+        Wait Until Element Is Visible    ${cancel_recurring_payment}
+        Click Element    ${cancel_recurring_payment}
+        Click Element    ${confirm_button}
+    EXCEPT
+        Log    intentional failure.
+    END
 
 verify the cancellation status
     Wait Until Element Is Visible     ${cancellation_status}

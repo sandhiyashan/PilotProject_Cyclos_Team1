@@ -1,0 +1,50 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.test cancel recurringPayment :: To validate Banking - payment to ...
+==============================================================================
+To validate payment                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_cancel_recurringPayment.robot:17
+    T:  To validate payment    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_cancel_recurringPayment.robot:23
+      To validate cancel the Recurring payment    user_name=keerthisan    amount_data=10
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_cancel_recurringPayment.robot:43
+      Click Cancel the recurring payment    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\PaymentUser.robot:150
+          
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\PaymentUser.robot:151
+      Wait Until Element Is Visible    ${cancel_recurring_payment}
+      |  ${cancel_recurring_payment} = xpath://div[text()='Cancel this recurring payment'] (str)
+______________________________________________________________________________
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_cancel_recurringPayment.robot:17
+    T:  To validate payment    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_cancel_recurringPayment.robot:23
+      To validate cancel the Recurring payment    user_name=keerthisan    amount_data=10
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_cancel_recurringPayment.robot:44
+      verify the cancellation status    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\PaymentUser.robot:160
+      Wait Until Element Is Visible    ${cancellation_status}
+      |  ${cancellation_status} = xpath://div[text()=" Canceled "] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div[text()=" Canceled "]' not visible after 5 seconds.
+------------------------------------------------------------------------------
+TestCases.test cancel recurringPayment :: To validate Banking - pa... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test2\pabot_results\20\output.xml

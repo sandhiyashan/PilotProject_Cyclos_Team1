@@ -16,12 +16,13 @@ ${blank_amount}
 ${description}
 
 *** Test Cases ***
-Validate Receive payment with data    ${user}    ${blank_amount}    ${description}
-    [Tags]  smoke
+Validate Receive payment with data    ${user}    ${blank_amount}    ${description}  
+
 *** Keywords ***
 Validate the Receive payment functionality with empty amount
     [Documentation]    This checks the Receive payment functionality with empty amount
     [Arguments]    ${user}    ${blank_amount}    ${description}
+    [Tags]  smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button

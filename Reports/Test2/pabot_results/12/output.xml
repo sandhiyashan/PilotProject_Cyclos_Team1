@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-07-16T15:59:03.690002" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases">
+<suite id="s1-s1" name="test blankAmountReceivePay" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankAmountReceivePay.robot">
+<test id="s1-s1-t1" name="Validate Receive payment with data" line="19">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:04.734011" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-16T15:59:04.733010" elapsed="1.616334"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:06.350344" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-16T15:59:06.349344" elapsed="3.737521"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-16T15:59:10.086865" elapsed="0.263431"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-16T15:59:10.350296" elapsed="0.017973"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:04.732010" elapsed="5.637260"/>
+</kw>
+<kw name="Validate the Receive payment functionality with empty amount">
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T15:59:10.371271" elapsed="1.938152"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:12.310423" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:12.309423" elapsed="0.122635"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:10.370269" elapsed="2.062789"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:12.434058" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:12.433058" elapsed="0.314745"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:12.748802" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-16T15:59:12.824294" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:12.747803" elapsed="0.152204"/>
+</kw>
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="PASS" start="2024-07-16T15:59:12.433058" elapsed="0.467954"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:12.904011" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:12.903012" elapsed="0.092253"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:12.902018" elapsed="0.094247"/>
+</kw>
+<kw name="Click the Banking Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T15:59:12.997266" elapsed="0.784289"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:13.782554" level="INFO">Clicking element 'xpath://div[text()='Banking']'.</msg>
+<arg>${Banking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:13.781555" elapsed="0.146625"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:12.996265" elapsed="0.932915"/>
+</kw>
+<kw name="Verify the Banking page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:13.929180" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<arg>${Banking_page_verify}</arg>
+<arg>${Banking_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T15:59:13.929180" elapsed="0.184101"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:13.929180" elapsed="0.184101"/>
+</kw>
+<kw name="Verify the Receive payment page" owner="ReceivePaymentResouce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${receive_payment}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T15:59:14.115723" elapsed="0.998986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:15.115715" level="INFO">Clicking element 'xpath://div[text()='Receive payment']'.</msg>
+<arg>${receive_payment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:15.114709" elapsed="0.091148"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:15.206861" level="INFO">Verifying element 'xpath://div[text()=' Receive payment ']' contains exact text 'Receive payment'.</msg>
+<arg>${rec_pay_verify}</arg>
+<arg>${rec_pay_verify_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T15:59:15.205857" elapsed="1.054892"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:14.114281" elapsed="2.146468"/>
+</kw>
+<kw name="Fill the receive payment form with data" owner="ReceivePaymentResouce">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:16.262749" level="INFO">Typing text 'demo' into text field 'xpath://input[@placeholder='Type to search']'.</msg>
+<arg>${input_user}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:16.262749" elapsed="0.383253"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:16.647009" level="INFO">Typing text ' ' into text field 'xpath://div[@class='label-value-container']//div[@class='input-group']//input'.</msg>
+<arg>${input_amount}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:16.647009" elapsed="0.132775"/>
+</kw>
+<arg>${user}</arg>
+<arg>${blank_amount}</arg>
+<status status="PASS" start="2024-07-16T15:59:16.261750" elapsed="0.518034"/>
+</kw>
+<kw name="Select the schedule" owner="ReceivePaymentResouce">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:16.783784" level="INFO">Clicking button 'xpath://button[@class='form-control text-left custom-select w-100']'.</msg>
+<arg>${schedue}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:16.780784" elapsed="0.977249"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:17.758033" level="INFO">Clicking element 'xpath://div[@role='listbox']//a[text()=' Pay now ']'.</msg>
+<arg>${pay_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:17.758033" elapsed="0.850218"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:16.779784" elapsed="1.828467"/>
+</kw>
+<kw name="Fill the description" owner="ReceivePaymentResouce">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:18.610260" level="INFO">Typing text 'Receive payment from users' into text field 'xpath://div[@class='d-flex label-value-value']//textarea'.</msg>
+<arg>${descrip_xpath}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:18.609257" elapsed="0.418673"/>
+</kw>
+<arg>${description}</arg>
+<status status="PASS" start="2024-07-16T15:59:18.609257" elapsed="0.420673"/>
+</kw>
+<kw name="Click the next button" owner="ReceivePaymentResouce">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T15:59:19.033534" level="INFO">Clicking button 'xpath://action-button/button'.</msg>
+<arg>${next_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T15:59:19.032785" elapsed="0.274591"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:19.031003" elapsed="0.276373"/>
+</kw>
+<kw name="verify amount error message is displayed" owner="ReceivePaymentResouce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${amt_error_mesg}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T15:59:19.308040" elapsed="0.033067"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:19.308040" elapsed="0.034067"/>
+</kw>
+<arg>user=demo</arg>
+<arg>blank_amount= </arg>
+<arg>description=Receive payment from users</arg>
+<tag>smoke</tag>
+<doc>This checks the Receive payment functionality with empty amount</doc>
+<status status="PASS" start="2024-07-16T15:59:10.369270" elapsed="8.972837"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-16T15:59:19.343107" elapsed="3.545423"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:19.342107" elapsed="3.546423"/>
+</kw>
+<status status="PASS" start="2024-07-16T15:59:04.731010" elapsed="18.157520"/>
+</test>
+<doc>This checks the Receive payment fubctionality</doc>
+<status status="PASS" start="2024-07-16T15:59:03.742137" elapsed="19.146898"/>
+</suite>
+<status status="PASS" start="2024-07-16T15:59:03.722025" elapsed="19.169012"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="test blankAmountReceivePay">TestCases.test blankAmountReceivePay</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

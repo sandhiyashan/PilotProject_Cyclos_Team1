@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 Resource    ../Resources/BusinessDirectoryResource.robot
 Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/LoginResource.robot
+Resource    ../Resources/HomeResource.robot
 Library    DataDriver    file=../TestData/busDir_data.xlsx   sheet_name=valid_data
 Test Setup    Open the Browser with URL
 Test Teardown    close Browser session
@@ -14,12 +15,13 @@ ${valid_keyword}
 
 *** Test Cases ***
 Validate Business Directory functionality with valid data    ${valid_keyword}
-    [Tags]  smoke
+    
     
 *** Keywords ***
 To Validate the Business Directory functionality with valid data
     [Documentation]    This checks the Business Directory functionality with valid data
     [Arguments]    ${valid_keyword}
+    [Tags]  smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    demo    1234
     LoginResource.click the login button

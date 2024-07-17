@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-07-10T11:58:00.113939" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases">
+<suite id="s1-s1" name="test validLogin" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_validLogin.robot">
+<test id="s1-s1-t1" name="Valid Login Test case" line="13">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:02.442007" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-10T11:58:02.442007" elapsed="2.208781"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:04.650788" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-10T11:58:04.650788" elapsed="3.679654"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-10T11:58:08.330442" elapsed="0.049212"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-10T11:58:08.380653" elapsed="0.006001"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:02.441002" elapsed="5.946745"/>
+</kw>
+<kw name="Valid Login Test">
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-10T11:58:13.390865" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-10T11:58:08.390752" elapsed="5.000113"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:13.391876" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:13.390865" elapsed="0.154771"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:08.389752" elapsed="5.155884"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:13.547642" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:13.546642" elapsed="0.132210"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:13.679852" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-10T11:58:13.730899" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:13.678852" elapsed="0.160689"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-07-10T11:58:13.546642" elapsed="0.292899"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:13.842540" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:13.841542" elapsed="0.163563"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:13.839541" elapsed="0.166569"/>
+</kw>
+<kw name="verify the login" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:14.007109" level="INFO">Verifying element 'xpath:(//div[@class="top-title"])[2]' contains exact text 'Cyclos'.</msg>
+<arg>${verify_login}</arg>
+<arg>Cyclos</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-10T11:58:14.007109" elapsed="0.048709"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:14.006110" elapsed="0.049708"/>
+</kw>
+<arg>username=sandhiyas</arg>
+<arg>password=Sand@123</arg>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-10T11:58:08.387747" elapsed="5.668071"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-10T11:58:14.056817" elapsed="4.496889"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:14.055818" elapsed="4.497888"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:02.436644" elapsed="16.117062"/>
+</test>
+<test id="s1-s1-t2" name="Valid Login Test case" line="13">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:18.561159" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-10T11:58:18.560159" elapsed="3.003184"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:21.564105" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-10T11:58:21.563343" elapsed="3.980911"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-10T11:58:25.544254" elapsed="0.181740"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-10T11:58:25.726994" elapsed="0.003555"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:18.560159" elapsed="7.170390"/>
+</kw>
+<kw name="Valid Login Test">
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-10T11:58:30.735663" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-10T11:58:25.733550" elapsed="5.002113"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:30.736666" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:30.735663" elapsed="0.222043"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:25.732548" elapsed="5.225158"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:30.959704" level="INFO">Typing text 'Sanjay_stark' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:30.959704" elapsed="0.325665"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:31.287369" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-10T11:58:31.360034" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:31.286367" elapsed="0.191214"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-07-10T11:58:30.958707" elapsed="0.518874"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:31.480937" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:58:31.479938" elapsed="0.130779"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:31.477581" elapsed="0.133136"/>
+</kw>
+<kw name="verify the login" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:58:31.613779" level="INFO">Verifying element 'xpath:(//div[@class="top-title"])[2]' contains exact text 'Cyclos'.</msg>
+<arg>${verify_login}</arg>
+<arg>Cyclos</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-10T11:58:31.612779" elapsed="0.088859"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:31.611773" elapsed="0.090865"/>
+</kw>
+<arg>username=Sanjay_stark</arg>
+<arg>password=Sanjay</arg>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-10T11:58:25.731548" elapsed="5.971090"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-10T11:58:31.703840" elapsed="4.325796"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:31.702638" elapsed="4.326998"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:58:18.554704" elapsed="17.475932"/>
+</test>
+<doc>Test to Login Page</doc>
+<status status="PASS" start="2024-07-10T11:58:00.183183" elapsed="35.848468"/>
+</suite>
+<status status="PASS" start="2024-07-10T11:58:00.155397" elapsed="35.877257"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="test validLogin">TestCases.test validLogin</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-10T11:58:18.554704" level="WARN">Multiple tests with name 'Valid Login Test case' executed in suite 'TestCases.test validLogin'.</msg>
+</errors>
+</robot>

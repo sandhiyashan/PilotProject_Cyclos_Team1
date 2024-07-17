@@ -11,9 +11,10 @@ Resource    ../Resources/MyAdvertisement.robot
 *** Test Cases ***
 
 add new advertisement
+    [Documentation]    Validate the adding of new advertisement functionality
     [Tags]    Smoke 
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.Fill the login form    Sanjay_stark    Sanjay
     LoginResource.click the login button
     HomeResource.Go to MarketPlace Page
     MyAdvertisement.click my advertisements
@@ -21,14 +22,14 @@ add new advertisement
     MyAdvertisement.fill the advertisement
     MyAdvertisement.click save button
 
-search advertisement
+search_advertisement
+    [Documentation]    Validate the search functionality on advertisement page
     [Tags]    Regression
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button
     HomeResource.Go to MarketPlace Page
     MyAdvertisement.click my advertisements
-    Sleep    5s
     MyAdvertisement.search functionality
     MyAdvertisement.verify the result
 

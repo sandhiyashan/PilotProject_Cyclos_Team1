@@ -1,0 +1,59 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.test addUserToContact :: This checks the Business Directory funct...
+==============================================================================
+Validate add to contact in Business Directory functionality             
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_addUserToContact.robot:16
+    T:  Validate add to contact in Business Directory functionality    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_addUserToContact.robot:20
+      To Validate the add to contact in Business Directory functionality    valid_keyword=shop
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_addUserToContact.robot:32
+      Add user to Contact    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\BusinessDirectoryResource.robot:56
+      Click Element    ${contact}
+      |  ${contact} = xpath:(//div[@class='row tiled-results']//a)[3] (str)
+______________________________________________________________________________
+| FAIL |
+StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF74D95EEA2+31554]
+	(No symbol) [0x00007FF74D8D7ED9]
+	(No symbol) [0x00007FF74D79872A]
+	(No symbol) [0x00007FF74D79E55E]
+	(No symbol) [0x00007FF74D7A0EB1]
+	(No symbol) [0x00007FF74D7A0F50]
+	(No symbol) [0x00007FF74D7EA804]
+	(No symbol) [0x00007FF74D7E96AA]
+	(No symbol) [0x00007FF74D7DC151]
+	(No symbol) [0x00007FF74D80D02A]
+	(No symbol) [0x00007FF74D7DBA76]
+	(No symbol) [0x00007FF74D80D240]
+	(No symbol) [0x00007FF74D82C977]
+	(No symbol) [0x00007FF74D80CDD3]
+	(No symbol) [0x00007FF74D7DA33B]
+	(No symbol) [0x00007FF74D7DAED1]
+	GetHandleVerifier [0x00007FF74DC68B1D+3217341]
+	GetHandleVerifier [0x00007FF74DCB5AE3+3532675]
+	GetHandleVerifier [0x00007FF74DCAB0E0+3489152]
+	GetHandleVerifier [0x00007FF74DA0E776+750614]
+	(No symbol) [0x00007FF74D8E375F]
+	(No symbol) [0x00007FF74D8DEB14]
+	(No symbol) [0x00007FF74D8DECA2]
+	(No symbol) [0x00007FF74D8CE16F]
+	BaseThreadInitThunk [0x00007FFFACEC257D+29]
+	RtlUserThreadStart [0x00007FFFAE00AA48+40]
+------------------------------------------------------------------------------
+TestCases.test addUserToContact :: This checks the Business Direct... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test2\pabot_results\8\output.xml

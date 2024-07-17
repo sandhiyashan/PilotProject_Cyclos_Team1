@@ -10,9 +10,10 @@ Resource    ../Resources/PaymentUser.robot
  
 *** Test Cases ***
 To validate payment to user functionality with valid data 
+    [Documentation]    Validate the user payment features
     [Tags]    smoke 
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    dharun    1234
+    LoginResource.Fill the login form    sathish_sk    sathish123
     LoginResource.click the login button
     HomeResource.Click the Banking Option
     HomeResource.Verify the Banking page is displayed
@@ -33,6 +34,7 @@ To validate payment to user functionality with valid data
     PaymentUser.verify the succesfull payment notification
 
 To validate payment to user functionality with blank user name
+    [Documentation]    Validate the user payment features
     [Tags]    regression
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234
@@ -46,6 +48,7 @@ To validate payment to user functionality with blank user name
     PaymentUser.verify the error message for user to field is given blank
 
 To validate payment to user functionality with blank amount field
+    [Documentation]    Validate the user payment features
     [Tags]    regression
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234
@@ -66,6 +69,7 @@ To validate payment to user functionality with blank amount field
     PaymentUser.verify the error message for amount field is given blank
 
 To validate payment to user functionality with blank fields
+    [Documentation]    Validate the user payment features
     [Tags]    retest
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234

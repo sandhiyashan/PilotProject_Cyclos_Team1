@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-07-16T16:01:23.666250" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases">
+<suite id="s1-s1" name="test receiveQRcode" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_receiveQRcode.robot">
+<test id="s1-s1-t1" name="Validate the Receive QR code functionality with valid data" line="18">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:23.876086" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-16T16:01:23.876086" elapsed="1.596722"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:25.472808" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-16T16:01:25.472808" elapsed="2.512252"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-16T16:01:27.986558" elapsed="0.030920"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-16T16:01:28.018479" elapsed="0.002000"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:23.875055" elapsed="4.145930"/>
+</kw>
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:28.020985" elapsed="2.020042"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:30.042027" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:30.041027" elapsed="0.110382"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:28.020985" elapsed="2.130424"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:30.152920" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:30.151916" elapsed="0.257826"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:30.410741" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-16T16:01:30.465725" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:30.410741" elapsed="0.133312"/>
+</kw>
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="PASS" start="2024-07-16T16:01:30.151916" elapsed="0.392137"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:30.545560" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:30.545053" elapsed="0.082327"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:30.544053" elapsed="0.083327"/>
+</kw>
+<kw name="Click the Banking Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:30.628799" elapsed="0.717880"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:31.346679" level="INFO">Clicking element 'xpath://div[text()='Banking']'.</msg>
+<arg>${Banking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:31.346679" elapsed="0.247879"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:30.627380" elapsed="0.967178"/>
+</kw>
+<kw name="Verify the Banking page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:31.595558" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<arg>${Banking_page_verify}</arg>
+<arg>${Banking_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:01:31.595558" elapsed="0.030122"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:31.594558" elapsed="0.031122"/>
+</kw>
+<kw name="Verify the Receive qr code page" owner="ReceiveQRcodeResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${receive_qr}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:31.626834" elapsed="1.275440"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:32.903275" level="INFO">Clicking element 'xpath://div[text()='Receive QR-code']'.</msg>
+<arg>${receive_qr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:32.902274" elapsed="0.143008"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:33.046282" level="INFO">Verifying element 'xpath://div[text()=' Receive QR-code payment ']' contains exact text 'Receive QR-code payment'.</msg>
+<arg>${Receive_qr_key_xpath}</arg>
+<arg>${receive_qr_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:01:33.045282" elapsed="0.485671"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:31.625680" elapsed="1.905273"/>
+</kw>
+<kw name="Fill the payment form with data" owner="ReceiveQRcodeResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:33.531953" level="INFO">Typing text '100' into text field 'css:div[class='input-group'] input'.</msg>
+<arg>${amount_css}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:33.531953" elapsed="0.214666"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:33.747619" level="INFO">Typing text '"Payment through QR code"' into text field 'css:div[class='label-value-container'] textarea'.</msg>
+<arg>${descript_css}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:33.746619" elapsed="0.225034"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:33.972652" level="INFO">Clicking button 'xpath://button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']'.</msg>
+<arg>${gen_qr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:33.971653" elapsed="0.162880"/>
+</kw>
+<arg>${amount}</arg>
+<arg>${description}</arg>
+<status status="PASS" start="2024-07-16T16:01:33.530953" elapsed="0.603580"/>
+</kw>
+<kw name="Verify the qr code is displayed" owner="ReceiveQRcodeResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${gen_qr}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:34.136535" elapsed="0.030944"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:34.191943" level="INFO">Element 'xpath://button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']' is displayed.</msg>
+<arg>${gen_qr}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:34.167479" elapsed="0.024464"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:34.134533" elapsed="0.057410"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-16T16:01:34.192948" elapsed="3.346468"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:34.191943" elapsed="3.347473"/>
+</kw>
+<doc>To validate the Receive qr code feature</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-16T16:01:23.875055" elapsed="13.664361"/>
+</test>
+<test id="s1-s1-t2" name="Validate the Receive QR code functionality with empty data" line="30">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:37.557929" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-16T16:01:37.557929" elapsed="3.049524"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:40.608452" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-16T16:01:40.608452" elapsed="2.765086"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-16T16:01:43.373538" elapsed="0.059080"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-16T16:01:43.432618" elapsed="0.004640"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:37.556928" elapsed="5.880330"/>
+</kw>
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:43.438255" elapsed="2.709494"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:46.148749" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:46.148749" elapsed="0.493184"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:43.438255" elapsed="3.204678"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:46.644026" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:46.642933" elapsed="0.974676"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:47.618614" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-16T16:01:47.705557" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:47.617609" elapsed="0.229749"/>
+</kw>
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="PASS" start="2024-07-16T16:01:46.642933" elapsed="1.204425"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:47.849537" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:47.848362" elapsed="0.096267"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:47.848362" elapsed="0.096267"/>
+</kw>
+<kw name="Click the Banking Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:47.945628" elapsed="2.138454"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:50.085086" level="INFO">Clicking element 'xpath://div[text()='Banking']'.</msg>
+<arg>${Banking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:50.084082" elapsed="0.699245"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:47.944629" elapsed="2.838698"/>
+</kw>
+<kw name="Verify the Banking page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:50.785622" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<arg>${Banking_page_verify}</arg>
+<arg>${Banking_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:01:50.784331" elapsed="0.103392"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:50.784331" elapsed="0.104796"/>
+</kw>
+<kw name="Verify the Receive qr code page" owner="ReceiveQRcodeResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${receive_qr}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:50.890132" elapsed="1.249444"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:52.140576" level="INFO">Clicking element 'xpath://div[text()='Receive QR-code']'.</msg>
+<arg>${receive_qr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:52.139576" elapsed="0.777266"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:52.919843" level="INFO">Verifying element 'xpath://div[text()=' Receive QR-code payment ']' contains exact text 'Receive QR-code payment'.</msg>
+<arg>${Receive_qr_key_xpath}</arg>
+<arg>${receive_qr_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:01:52.916842" elapsed="0.506945"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:50.890132" elapsed="2.533655"/>
+</kw>
+<kw name="Fill the payment form with data" owner="ReceiveQRcodeResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:53.425575" level="INFO">Typing text '' into text field 'css:div[class='input-group'] input'.</msg>
+<arg>${amount_css}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:53.425068" elapsed="0.471362"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:53.897941" level="INFO">Typing text '' into text field 'css:div[class='label-value-container'] textarea'.</msg>
+<arg>${descript_css}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:53.897433" elapsed="0.194822"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:54.093258" level="INFO">Clicking button 'xpath://button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']'.</msg>
+<arg>${gen_qr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:01:54.092255" elapsed="0.169461"/>
+</kw>
+<arg>${blank_amount}</arg>
+<arg>${blank_description}</arg>
+<status status="PASS" start="2024-07-16T16:01:53.423787" elapsed="0.837929"/>
+</kw>
+<kw name="verify error message is displayed" owner="ReceiveQRcodeResources">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:54.346929" level="INFO">Element 'xpath:(//div[@class='d-flex label-value-value']/field-errors/div)' is displayed.</msg>
+<arg>${error_mess}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:01:54.262715" elapsed="0.084214"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:54.262715" elapsed="0.084214"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-16T16:01:54.349098" elapsed="5.220696"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:54.347929" elapsed="5.221865"/>
+</kw>
+<doc>To validate the Receive qr code feature</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-16T16:01:37.540416" elapsed="22.029378"/>
+</test>
+<test id="s1-s1-t3" name="Validate the Receive QR code functionality with empty amount data" line="42">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:01:59.572792" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-16T16:01:59.571791" elapsed="1.567051"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:01.139847" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-16T16:02:01.138842" elapsed="0.947823"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-16T16:02:02.086665" elapsed="1.518666"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-16T16:02:03.606626" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:01:59.571791" elapsed="4.035835"/>
+</kw>
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:03.609766" elapsed="1.976564"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:05.586330" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:05.586330" elapsed="0.119190"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:03.608766" elapsed="2.096754"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:05.708520" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:05.708520" elapsed="0.224614"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:05.934137" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-16T16:02:06.030183" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:05.933134" elapsed="0.204149"/>
+</kw>
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="PASS" start="2024-07-16T16:02:05.707519" elapsed="0.429764"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:06.141800" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:06.140289" elapsed="0.103898"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:06.138282" elapsed="0.105905"/>
+</kw>
+<kw name="Click the Banking Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:06.245694" elapsed="0.642594"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:06.890290" level="INFO">Clicking element 'xpath://div[text()='Banking']'.</msg>
+<arg>${Banking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:06.889291" elapsed="0.070011"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:06.244187" elapsed="0.715115"/>
+</kw>
+<kw name="Verify the Banking page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:06.960302" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<arg>${Banking_page_verify}</arg>
+<arg>${Banking_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:02:06.960302" elapsed="0.033269"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:06.959302" elapsed="0.034269"/>
+</kw>
+<kw name="Verify the Receive qr code page" owner="ReceiveQRcodeResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${receive_qr}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:06.995066" elapsed="1.695811"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:08.690877" level="INFO">Clicking element 'xpath://div[text()='Receive QR-code']'.</msg>
+<arg>${receive_qr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:08.690877" elapsed="0.194251"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:08.886506" level="INFO">Verifying element 'xpath://div[text()=' Receive QR-code payment ']' contains exact text 'Receive QR-code payment'.</msg>
+<arg>${Receive_qr_key_xpath}</arg>
+<arg>${receive_qr_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:02:08.885128" elapsed="0.459209"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:06.993571" elapsed="2.350766"/>
+</kw>
+<kw name="Fill the payment form with data" owner="ReceiveQRcodeResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:09.345337" level="INFO">Typing text '' into text field 'css:div[class='input-group'] input'.</msg>
+<arg>${amount_css}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:09.345337" elapsed="0.188503"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:09.534840" level="INFO">Typing text '"Payment through QR code"' into text field 'css:div[class='label-value-container'] textarea'.</msg>
+<arg>${descript_css}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:09.533840" elapsed="0.192002"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:09.726842" level="INFO">Clicking button 'xpath://button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']'.</msg>
+<arg>${gen_qr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:09.725842" elapsed="0.104043"/>
+</kw>
+<arg>${blank_amount}</arg>
+<arg>${description}</arg>
+<status status="PASS" start="2024-07-16T16:02:09.344337" elapsed="0.486549"/>
+</kw>
+<kw name="verify error message is displayed" owner="ReceiveQRcodeResources">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:09.866660" level="INFO">Element 'xpath:(//div[@class='d-flex label-value-value']/field-errors/div)' is displayed.</msg>
+<arg>${error_mess}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:09.831887" elapsed="0.034773"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:09.830886" elapsed="0.035774"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-16T16:02:09.867663" elapsed="2.262643"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:09.867663" elapsed="2.262643"/>
+</kw>
+<doc>To validate the Receive qr code feature</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-16T16:01:59.570792" elapsed="12.559514"/>
+</test>
+<test id="s1-s1-t4" name="Validate the Receive QR code functionality with blank description" line="54">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:12.132306" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-16T16:02:12.132306" elapsed="1.957543"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:14.090853" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-16T16:02:14.089849" elapsed="2.360298"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-16T16:02:16.450147" elapsed="0.039612"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-16T16:02:16.489759" elapsed="0.002000"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:12.131306" elapsed="4.360453"/>
+</kw>
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:16.492757" elapsed="1.929922"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:18.423733" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:18.423733" elapsed="0.069754"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:16.492757" elapsed="2.000730"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:18.495676" level="INFO">Typing text 'sandhiyas' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:18.494487" elapsed="0.121567"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:18.617053" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-16T16:02:18.648420" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:18.616054" elapsed="0.087127"/>
+</kw>
+<arg>sandhiyas</arg>
+<arg>Sand@123</arg>
+<status status="PASS" start="2024-07-16T16:02:18.494487" elapsed="0.208694"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:18.704481" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:18.703181" elapsed="0.080614"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:18.703181" elapsed="0.080614"/>
+</kw>
+<kw name="Click the Banking Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:18.784968" elapsed="0.689141"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:19.475119" level="INFO">Clicking element 'xpath://div[text()='Banking']'.</msg>
+<arg>${Banking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:19.474109" elapsed="0.042664"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:18.783795" elapsed="0.732978"/>
+</kw>
+<kw name="Verify the Banking page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:19.516773" level="INFO">Verifying element 'xpath://div[text()='Banking']' contains exact text 'Banking'.</msg>
+<arg>${Banking_page_verify}</arg>
+<arg>${Banking_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:02:19.516773" elapsed="0.015607"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:19.516773" elapsed="0.015607"/>
+</kw>
+<kw name="Verify the Receive qr code page" owner="ReceiveQRcodeResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${receive_qr}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:19.533410" elapsed="0.996496"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:20.529906" level="INFO">Clicking element 'xpath://div[text()='Receive QR-code']'.</msg>
+<arg>${receive_qr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:20.529906" elapsed="0.046270"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:20.577175" level="INFO">Verifying element 'xpath://div[text()=' Receive QR-code payment ']' contains exact text 'Receive QR-code payment'.</msg>
+<arg>${Receive_qr_key_xpath}</arg>
+<arg>${receive_qr_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-16T16:02:20.576176" elapsed="0.280129"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:19.532380" elapsed="1.323925"/>
+</kw>
+<kw name="Fill the payment form with data" owner="ReceiveQRcodeResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:20.857405" level="INFO">Typing text '100' into text field 'css:div[class='input-group'] input'.</msg>
+<arg>${amount_css}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:20.857405" elapsed="0.067878"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:20.926283" level="INFO">Typing text '' into text field 'css:div[class='label-value-container'] textarea'.</msg>
+<arg>${descript_css}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:20.926283" elapsed="0.061564"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:20.988846" level="INFO">Clicking button 'xpath://button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']'.</msg>
+<arg>${gen_qr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:02:20.987847" elapsed="0.051264"/>
+</kw>
+<arg>${amount}</arg>
+<arg>${blank_description}</arg>
+<status status="PASS" start="2024-07-16T16:02:20.857405" elapsed="0.181706"/>
+</kw>
+<kw name="Verify the qr code is displayed" owner="ReceiveQRcodeResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${gen_qr}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:21.040179" elapsed="0.011941"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:02:21.063679" level="INFO">Element 'xpath://button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']' is displayed.</msg>
+<arg>${gen_qr}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:02:21.052120" elapsed="0.011559"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:21.040179" elapsed="0.025023"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-16T16:02:21.065202" elapsed="2.299564"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:02:21.065202" elapsed="2.299564"/>
+</kw>
+<doc>To validate the Receive qr code feature</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-16T16:02:12.131306" elapsed="11.233460"/>
+</test>
+<doc>This checks the Receive QR code fubctionality</doc>
+<status status="PASS" start="2024-07-16T16:01:23.692564" elapsed="59.672202"/>
+</suite>
+<status status="PASS" start="2024-07-16T16:01:23.676663" elapsed="59.689289"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="test receiveQRcode">TestCases.test receiveQRcode</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

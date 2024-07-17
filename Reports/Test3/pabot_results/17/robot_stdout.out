@@ -1,0 +1,36 @@
+==============================================================================
+PilotProject Cyclos Team1-1                                                   
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                         
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases.test blankUserReceivePay :: This chec...
+==============================================================================
+Validate Receive payment with empty user data                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankUserReceivePay.robot:20
+    T:  Validate Receive payment with empty user data    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankUserReceivePay.robot:23
+      Validate the Receive payment functionality with empty user data    blank_user=     amount=100
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankUserReceivePay.robot:35
+      verify user error message is displayed    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\ReceivePaymentResouce.robot:49
+      Wait Until Element Is Visible    ${user_error_msg}
+      |  ${user_error_msg} = xpath:(//div[@class='d-flex label-value-value']//field-errors/div)[1] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath:(//div[@class='d-flex label-value-value']//field-errors/div)[1]' not visible after 5 seconds.
+------------------------------------------------------------------------------
+PilotProject Cyclos Team1-1.TestCases.test blankUserReceivePay :: ... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+PilotProject Cyclos Team1-1                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test3\pabot_results\17\output.xml

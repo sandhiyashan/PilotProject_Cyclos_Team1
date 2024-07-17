@@ -1,0 +1,36 @@
+==============================================================================
+PilotProject Cyclos Team1-1                                                   
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                         
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases.test recurringPayment :: To validate ...
+==============================================================================
+To validate payment                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_recurringPayment.robot:16
+    T:  To validate payment    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_recurringPayment.robot:21
+      To validate the payment to user functionality with Recurring payment    user_name=keerthisan    amount_data=10
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_recurringPayment.robot:33
+      Select the user    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\PaymentUser.robot:70
+      Click Element    ${select_user}
+      |  ${select_user} = xpath://div[@class="dropdown-menu show"]//a[1] (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath://div[@class="dropdown-menu show"]//a[1]' not found.
+------------------------------------------------------------------------------
+PilotProject Cyclos Team1-1.TestCases.test recurringPayment :: To ... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+PilotProject Cyclos Team1-1                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test3\pabot_results\30\output.xml

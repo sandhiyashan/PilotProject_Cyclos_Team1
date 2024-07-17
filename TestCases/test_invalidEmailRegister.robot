@@ -7,7 +7,7 @@ Test Teardown    Close Browser Session
 Resource    ../Resources/GenericResource.robot
 Resource    ../Resources/HomeResource.robot
 Resource    ../Resources/RegisterResource.robot
-Test Template    Valid register with all the fields
+Test Template    Valid register with invalid email field
 
 *** Test Cases ***
 valid register Test case
@@ -15,8 +15,10 @@ valid register Test case
 
 *** Keywords ***
 
-Valid register with all the fields
+Valid register with invalid email field
+    [Documentation]    To validate register functionality with invalid email field
     [Arguments]    ${name}    ${login}    ${email} 
+    [Tags]    Regression
     HomeResource.Go to Register Page
     RegisterResource.Verify Register Page opens
     RegisterResource.Fill the Required feilds    ${name}    ${login}    ${email}

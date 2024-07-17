@@ -1,0 +1,21 @@
+==============================================================================
+PilotProject Cyclos Team1-1                                                   
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                         
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases.Test Myadvertisement :: Test to Login...
+==============================================================================
+add new advertisement :: Validate the adding of new advertisement ... | PASS |
+------------------------------------------------------------------------------
+search_advertisement :: Validate the search functionality on adver... | PASS |
+------------------------------------------------------------------------------
+PilotProject Cyclos Team1-1.TestCases.Test Myadvertisement :: Test... | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                 | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+PilotProject Cyclos Team1-1                                           | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test3\pabot_results\2\output.xml

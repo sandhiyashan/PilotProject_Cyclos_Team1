@@ -13,7 +13,7 @@ ${textArea}    xpath://div[@class="wrapper"]/div[@class="editor"]
 ${save_btn}    css:button[class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary"]
 ${keywords}    xpath://input-field[@formcontrolname="keywords"]/label-value/div/div/input
 ${search_result}    xpath://div[@class="card-text"]
-${searched_element}    Lion
+${searched_element}    Orange
 
 *** Keywords ***
 
@@ -40,9 +40,7 @@ click save button
 search functionality
     Click Element    ${keywords}
     Input Text    ${keywords}    ${searched_element}  
-    Sleep    5s
 
 verify the result
-    Sleep    5s
     ${element}    Get Text    ${search_result} 
     Should Be Equal As Strings    ${element}    ${searched_element}

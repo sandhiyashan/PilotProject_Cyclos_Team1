@@ -1,0 +1,31 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.test addUserToContact :: This checks the Business Directory funct...
+==============================================================================
+Validate add to contact in Business Directory functionality             
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_addUserToContact.robot:16
+    T:  Validate add to contact in Business Directory functionality    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_addUserToContact.robot:20
+      To Validate the add to contact in Business Directory functionality    valid_keyword=shop
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_addUserToContact.robot:32
+      Add user to Contact    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\BusinessDirectoryResource.robot:57
+      Wait Until Element Is Visible    ${add_to_contact}
+      |  ${add_to_contact} = xpath://div[text()='Add to contacts'] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div[text()='Add to contacts']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+TestCases.test addUserToContact :: This checks the Business Direct... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test1\pabot_results\8\output.xml

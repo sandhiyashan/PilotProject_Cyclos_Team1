@@ -15,11 +15,13 @@ ${blank_amount}
 
 *** Test Cases ***
 Validate Receive QR code with blank amount    ${blank_amount}    ${description}
-    [Tags]  smoke
+    
+
 *** Keywords ***
 Validate the Receive QR code functionality with empty amount
     [Documentation]    This checks the qr code with blank amount
     [Arguments]    ${blank_amount}    ${description}
+    [Tags]  smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button

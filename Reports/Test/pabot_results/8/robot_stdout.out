@@ -1,0 +1,30 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Myadvertisement :: Test to Login Page                          
+==============================================================================
+add new advertisement :: Validate the adding of new advertisement ...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_myadvertisement.robot:13
+    T:  add new advertisement    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_myadvertisement.robot:21
+      add new advertisements    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\MyAdvertisement.robot:25
+      Wait Until Element Is Visible    ${add_new}
+      |  ${add_new} = xpath://div[text()="Add new"] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div[text()="Add new"]' not visible after 5 seconds.
+------------------------------------------------------------------------------
+search advertisement :: Validate the search functionality on adver... | PASS |
+------------------------------------------------------------------------------
+TestCases.Test Myadvertisement :: Test to Login Page                  | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test\pabot_results\8\output.xml

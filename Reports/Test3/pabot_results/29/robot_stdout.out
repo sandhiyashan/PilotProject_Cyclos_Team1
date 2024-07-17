@@ -1,0 +1,25 @@
+==============================================================================
+PilotProject Cyclos Team1-1                                                   
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                         
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases.test receiveQRcode :: This checks the...
+==============================================================================
+Validate the Receive QR code functionality with valid data :: To v... | PASS |
+------------------------------------------------------------------------------
+Validate the Receive QR code functionality with empty data :: To v... | PASS |
+------------------------------------------------------------------------------
+Validate the Receive QR code functionality with empty amount data ... | PASS |
+------------------------------------------------------------------------------
+Validate the Receive QR code functionality with blank description ... | PASS |
+------------------------------------------------------------------------------
+PilotProject Cyclos Team1-1.TestCases.test receiveQRcode :: This c... | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                 | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+PilotProject Cyclos Team1-1                                           | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test3\pabot_results\29\output.xml

@@ -1,0 +1,31 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.test blankAmountReceivePay :: This checks the Receive payment fub...
+==============================================================================
+Validate Receive payment with data                                      
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankAmountReceivePay.robot:19
+    T:  Validate Receive payment with data    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankAmountReceivePay.robot:23
+      Validate the Receive payment functionality with empty amount    user=demo    blank_amount=     description=Receive payment from users
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_blankAmountReceivePay.robot:32
+      Verify the Receive payment page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\ReceivePaymentResouce.robot:23
+      Wait Until Element Is Visible    ${receive_payment}
+      |  ${receive_payment} = xpath://div[@class='menu-group']//span[text()='Receive payment'] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div[@class='menu-group']//span[text()='Receive payment']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+TestCases.test blankAmountReceivePay :: This checks the Receive pa... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test1\pabot_results\12\output.xml

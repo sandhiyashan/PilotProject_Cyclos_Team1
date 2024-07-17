@@ -17,11 +17,13 @@ ${blank_description}
 
 *** Test Cases ***
 Validate Receive payment with data    ${user}    ${amount}    ${blank_description}
-    [Tags]  regression
+    
+
 *** Keywords ***
 Validate the Receive payment functionality with empty description
     [Documentation]    This checks the Receive payment functionality with empty description
     [Arguments]    ${user}    ${amount}    ${blank_description}
+    [Tags]  regression
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234
     LoginResource.click the login button

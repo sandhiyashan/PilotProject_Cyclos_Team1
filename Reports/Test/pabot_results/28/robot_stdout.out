@@ -1,0 +1,28 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.test memberAccount :: This checks the Member account fubctionality  
+==============================================================================
+Validate the Member Account :: validate the balance and transaction     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_memberAccount.robot:13
+    T:  Validate the Member Account    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_memberAccount.robot:23
+      Assert the transaction data    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\MemberAccountResource.robot:28
+      Table Cell Should Contain    ${table_xpath}    2    5    +1,00 IU's
+      |  ${table_xpath} = xpath://table[@class='table table-hover cursor-pointer'] (str)
+______________________________________________________________________________
+| FAIL |
+Table 'xpath://table[@class='table table-hover cursor-pointer']' cell on row 2 and column 5 should have contained text '+1,00 IU's' but it had '-2,00 IU's'.
+------------------------------------------------------------------------------
+TestCases.test memberAccount :: This checks the Member account fub... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test\pabot_results\28\output.xml

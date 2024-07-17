@@ -10,6 +10,8 @@ Resource    ../Resources/HomeResource.robot
 *** Test Cases ***
 
 testcase for logout functionality
+    [Documentation]  Validate the Logout Functionality
+    [Tags]  Smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    sandhiyas    Sand@123
     LoginResource.click the login button

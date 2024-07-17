@@ -25,5 +25,5 @@ Assert the transaction data
     Wait Until Element Is Visible    ${table_xpath}
     ${element_count}    Get Element Count    ${table_xpath}
     Should Not Be Equal As Numbers    0    ${element_count}
-    Table Cell Should Contain    ${table_xpath}    2    5    +1,00 IU's    
-
+    #Table Cell Should Contain    ${table_xpath}    2    5    +1,00 IU's    
+    

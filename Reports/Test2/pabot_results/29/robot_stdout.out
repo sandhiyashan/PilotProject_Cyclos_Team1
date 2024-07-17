@@ -1,0 +1,20 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.test receiveQRcode :: This checks the Receive QR code fubctionality 
+==============================================================================
+Validate the Receive QR code functionality with valid data :: To v... | PASS |
+------------------------------------------------------------------------------
+Validate the Receive QR code functionality with empty data :: To v... | PASS |
+------------------------------------------------------------------------------
+Validate the Receive QR code functionality with empty amount data ... | PASS |
+------------------------------------------------------------------------------
+Validate the Receive QR code functionality with blank description ... | PASS |
+------------------------------------------------------------------------------
+TestCases.test receiveQRcode :: This checks the Receive QR code fu... | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test2\pabot_results\29\output.xml

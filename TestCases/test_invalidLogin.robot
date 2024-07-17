@@ -12,11 +12,13 @@ Test Template    Invalid Login Test
 *** Test Cases ***
 inValid Login Test
    ${Username}    ${Password}
-
+   
 *** Keywords ***
 
 Invalid Login Test
+    [Documentation]    Validate inValid Login Functionality
     [Arguments]    ${Username}    ${Password}
+    [Tags]    Smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    ${Username}    ${Password}
     LoginResource.click the login button

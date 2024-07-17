@@ -1,0 +1,59 @@
+==============================================================================
+PilotProject Cyclos Team1-1                                                   
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                         
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases.Test Advertisement :: To validate Adv...
+==============================================================================
+verify that the valid keyword is entered in the keyword field :: V... | PASS |
+------------------------------------------------------------------------------
+verify that the Invalid keyword is entered in the keyword field ::... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:43
+    T:  Verify the advertisements functionality with dropdownlist order by Relevance    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:50
+      Click on the advertisement page button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\AdvertisementResource.robot:38
+      Wait Until Element Is Visible    ${Advertisement}
+      |  ${Advertisement} = xpath://div[text()='Advertisements'] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div[text()='Advertisements']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+verify the wishlist functionality :: To validate the wishlist func...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:102
+    T:  verify the wishlist functionality    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:113
+      click the like button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\AdvertisementResource.robot:127
+      Wait Until Element Is Visible    ${like_button}
+      |  ${like_button} = xpath://div[text()='Add to favorites'] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div[text()='Add to favorites']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+PilotProject Cyclos Team1-1.TestCases.Test Advertisement :: To val... | FAIL |
+7 tests, 5 passed, 2 failed
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                 | FAIL |
+7 tests, 5 passed, 2 failed
+==============================================================================
+PilotProject Cyclos Team1-1                                           | FAIL |
+7 tests, 5 passed, 2 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test3\pabot_results\0\output.xml

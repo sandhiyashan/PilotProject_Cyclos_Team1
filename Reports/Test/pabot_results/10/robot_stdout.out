@@ -1,0 +1,34 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test User Payment :: To validate Banking - payment to user Functi...
+==============================================================================
+To validate payment to user functionality with valid data :: Valid...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_user_payment.robot:12
+    T:  To validate payment to user functionality with valid data    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_user_payment.robot:32
+      Verify the confirmation page is displayed    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\PaymentUser.robot:122
+      Element Should Be Visible    ${pay_confirm_title}
+      |  ${pay_confirm_title} = xpath://div[text()=' Payment confirmation '] (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath://div[text()=' Payment confirmation ']' not found.
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank user name :: ... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank amount field ... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank fields :: Val... | PASS |
+------------------------------------------------------------------------------
+TestCases.Test User Payment :: To validate Banking - payment to us... | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test\pabot_results\10\output.xml

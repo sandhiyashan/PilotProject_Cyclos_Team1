@@ -1,0 +1,39 @@
+==============================================================================
+PilotProject Cyclos Team1-1                                                   
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                         
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases.Test User Payment :: To validate Bank...
+==============================================================================
+To validate payment to user functionality with valid data :: Valid...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_user_payment.robot:12
+    T:  To validate payment to user functionality with valid data    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_user_payment.robot:15
+      Go to Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\HomeResource.robot:30
+      Wait Until Element Is Visible    ${login_btn}
+      |  ${login_btn} = xpath:(//div[@class="ml-2"])[3] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath:(//div[@class="ml-2"])[3]' not visible after 5 seconds.
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank user name :: ... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank amount field ... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank fields :: Val... | PASS |
+------------------------------------------------------------------------------
+PilotProject Cyclos Team1-1.TestCases.Test User Payment :: To vali... | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+PilotProject Cyclos Team1-1.TestCases                                 | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+PilotProject Cyclos Team1-1                                           | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test3\pabot_results\6\output.xml

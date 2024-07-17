@@ -1,0 +1,38 @@
+datasources:c69c922232cc837110dfe93de1cef7143109ec0a
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:aefc747a22f582b5338078b0485f96f0b98049f5
+--suite PilotProject Cyclos Team1-1.TestCases.Test Advertisement
+--suite PilotProject Cyclos Team1-1.TestCases.Test Logout
+--suite PilotProject Cyclos Team1-1.TestCases.Test Myadvertisement
+--suite PilotProject Cyclos Team1-1.TestCases.Test Pay User Invalid
+--suite PilotProject Cyclos Team1-1.TestCases.Test Payment To User
+--suite PilotProject Cyclos Team1-1.TestCases.Test Register
+--suite PilotProject Cyclos Team1-1.TestCases.Test User Payment
+--suite PilotProject Cyclos Team1-1.TestCases.test Blankfields
+--suite PilotProject Cyclos Team1-1.TestCases.test addUserToContact
+--suite PilotProject Cyclos Team1-1.TestCases.test alreadyExistsEmail
+--suite PilotProject Cyclos Team1-1.TestCases.test blankAmount
+--suite PilotProject Cyclos Team1-1.TestCases.test blankAmountQRcode
+--suite PilotProject Cyclos Team1-1.TestCases.test blankAmountReceivePay
+--suite PilotProject Cyclos Team1-1.TestCases.test blankDescReceivePay
+--suite PilotProject Cyclos Team1-1.TestCases.test blankDescripQRcode
+--suite PilotProject Cyclos Team1-1.TestCases.test blankFieldRegister
+--suite PilotProject Cyclos Team1-1.TestCases.test blankQRcode
+--suite PilotProject Cyclos Team1-1.TestCases.test blankUserReceivePay
+--suite PilotProject Cyclos Team1-1.TestCases.test blankUserfields
+--suite PilotProject Cyclos Team1-1.TestCases.test businessDirectory
+--suite PilotProject Cyclos Team1-1.TestCases.test cancel recurringPayment
+--suite PilotProject Cyclos Team1-1.TestCases.test confirmPasswordRegister
+--suite PilotProject Cyclos Team1-1.TestCases.test invalidEmailRegister
+--suite PilotProject Cyclos Team1-1.TestCases.test invalidKeyBusinessDirectory
+--suite PilotProject Cyclos Team1-1.TestCases.test invalidLogin
+--suite PilotProject Cyclos Team1-1.TestCases.test invalidPasswordRegister
+--suite PilotProject Cyclos Team1-1.TestCases.test invalidReceivePay
+--suite PilotProject Cyclos Team1-1.TestCases.test mandatoryFieldRegister
+--suite PilotProject Cyclos Team1-1.TestCases.test memberAccount
+--suite PilotProject Cyclos Team1-1.TestCases.test receiveQRcode
+--suite PilotProject Cyclos Team1-1.TestCases.test recurringPayment
+--suite PilotProject Cyclos Team1-1.TestCases.test validLogin
+--suite PilotProject Cyclos Team1-1.TestCases.test validQRcode
+--suite PilotProject Cyclos Team1-1.TestCases.test validReceivePay

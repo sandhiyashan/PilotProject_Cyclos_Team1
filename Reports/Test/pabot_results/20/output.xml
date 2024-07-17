@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-07-10T11:56:30.953604" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases">
+<suite id="s1-s1" name="test businessDirectory" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_businessDirectory.robot">
+<test id="s1-s1-t1" name="Validate Business Directory functionality with valid data" line="16">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:32.436671" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-10T11:56:32.436671" elapsed="2.561593"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:34.999336" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-10T11:56:34.998264" elapsed="3.967126"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-10T11:56:38.966391" elapsed="0.548140"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-10T11:56:39.514531" elapsed="0.006001"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:32.434671" elapsed="7.085861"/>
+</kw>
+<kw name="To Validate the Business Directory functionality with valid data">
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-10T11:56:44.524310" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-10T11:56:39.521978" elapsed="5.002332"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:44.525321" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:44.525321" elapsed="0.850121"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:39.521978" elapsed="5.853464"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:45.379443" level="INFO">Typing text 'demo' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:45.378443" elapsed="0.229583"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:45.609032" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-10T11:56:45.685388" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:45.608026" elapsed="0.176608"/>
+</kw>
+<arg>demo</arg>
+<arg>1234</arg>
+<status status="PASS" start="2024-07-10T11:56:45.377444" elapsed="0.408197"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:45.787639" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:45.786639" elapsed="0.369462"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:45.785641" elapsed="0.370460"/>
+</kw>
+<kw name="Click the Marketplace Option" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Marketplace_Xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-10T11:56:46.157100" elapsed="1.283223"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:47.442806" level="INFO">Clicking element 'xpath://a[@id='menu_marketplace']'.</msg>
+<arg>${Marketplace_Xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:47.441323" elapsed="0.860762"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:46.157100" elapsed="2.144985"/>
+</kw>
+<kw name="Verify the Marketplace page is displayed" owner="HomeResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:48.304643" level="INFO">Verifying element 'xpath://div[@class='side-menu-title' and text()=' Marketplace ']' contains exact text 'Marketplace'.</msg>
+<arg>${Marketplace_page_verify}</arg>
+<arg>${Marketplace_page_keyword}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-10T11:56:48.304643" elapsed="3.180321"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:48.303088" elapsed="3.183238"/>
+</kw>
+<kw name="Select the option business directory" owner="BusinessDirectoryResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${business_dir}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-10T11:56:51.487329" elapsed="1.663459"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:53.151787" level="INFO">Clicking element 'xpath:(//nav[@class='navbar d-flex flex-column align-items-stretch']//a/div)[1]'.</msg>
+<arg>${business_dir}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:53.150788" elapsed="1.364942"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:51.486326" elapsed="3.029404"/>
+</kw>
+<kw name="verify the business directory page open" owner="BusinessDirectoryResource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:54.516737" level="INFO">Verifying element 'xpath://div[text()=' Business directory ']' contains exact text 'Business directory'.</msg>
+<arg>${business_dir_title}</arg>
+<arg>${business_dir_title_verify}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-10T11:56:54.516737" elapsed="0.460201"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:54.515730" elapsed="0.461208"/>
+</kw>
+<kw name="Enter the key in keyword field" owner="BusinessDirectoryResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:54.979289" level="INFO">Typing text 'shop' into text field 'xpath://div[@class='d-flex label-value-value']/input'.</msg>
+<arg>${input_key}</arg>
+<arg>${keyword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:54.977943" elapsed="0.414187"/>
+</kw>
+<arg>${valid_keyword}</arg>
+<status status="PASS" start="2024-07-10T11:56:54.977943" elapsed="0.415188"/>
+</kw>
+<kw name="Click the orderby button" owner="BusinessDirectoryResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:55.395496" level="INFO">Clicking button 'xpath://button[@class='form-control text-left custom-select w-100']'.</msg>
+<arg>${order_by_xpath}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:55.394492" elapsed="0.200308"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:55.393131" elapsed="0.201669"/>
+</kw>
+<kw name="Click the relevance option" owner="BusinessDirectoryResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:55.597302" level="INFO">Clicking element 'xpath://div[@role='listbox']//a[text()='Relevance']'.</msg>
+<arg>${relevance_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:55.597302" elapsed="0.126191"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:55.596296" elapsed="0.127197"/>
+</kw>
+<kw name="Verify the relevance results" owner="BusinessDirectoryResource">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:55.760251" level="INFO">${list_of_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="9a3227affa200251f9ccddf44ff17fc1", element="f.633335328AF6FB837DC688007FD45DAE.d.284BC6E22022B1BDEE53F28C7C0CC6B4.e.96")&gt;]</msg>
+<var>${list_of_elements}</var>
+<arg>${relev_results}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:55.726005" elapsed="0.034246"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-10T11:56:56.099952" level="INFO">${text} = Natural garden pools
+www.garden-pool.test.com
+Matt photo store
+www.matt.test.com
+Stewart Fashion
+www.stewart.test.com
+The Pancake shop
+www.pancakeshop.test.com
+Golden Travels
+www.brown.test.com
+Gesell...</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T11:56:55.763257" elapsed="0.336695"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_relev_res}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-07-10T11:56:56.101267" elapsed="0.001010"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9a3227affa200251f9ccddf44ff17fc1", element="f.633335328AF6FB837DC688007FD45DAE.d.284BC6E22022B1BDEE53F28C7C0CC6B4.e.96")&gt;</var>
+<status status="PASS" start="2024-07-10T11:56:55.762260" elapsed="0.340017"/>
+</iter>
+<var>${element}</var>
+<value>@{list_of_elements}</value>
+<status status="PASS" start="2024-07-10T11:56:55.761258" elapsed="0.341019"/>
+</for>
+<status status="PASS" start="2024-07-10T11:56:55.724495" elapsed="0.378779"/>
+</kw>
+<arg>valid_keyword=shop</arg>
+<doc>This checks the Business Directory functionality with valid data</doc>
+<status status="PASS" start="2024-07-10T11:56:39.520532" elapsed="16.582742"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-10T11:56:56.104274" elapsed="5.508429"/>
+</kw>
+<status status="PASS" start="2024-07-10T11:56:56.103274" elapsed="5.509429"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-07-10T11:56:32.431569" elapsed="29.181134"/>
+</test>
+<doc>This checks the Business Directory functionality</doc>
+<status status="PASS" start="2024-07-10T11:56:30.984088" elapsed="30.629615"/>
+</suite>
+<status status="PASS" start="2024-07-10T11:56:30.967998" elapsed="30.647706"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="test businessDirectory">TestCases.test businessDirectory</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

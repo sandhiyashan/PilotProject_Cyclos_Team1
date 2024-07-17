@@ -23,7 +23,7 @@ To validate the payment to user functionality with Recurring payment
     [Tags]    Smoke
     [Arguments]    ${user_name}    ${amount_data}
     HomeResource.Go to Login Page
-    LoginResource.Fill the login form    sandhiyas    Sand@123
+    LoginResource.Fill the login form    sathish_sk    sathish123
     LoginResource.click the login button
     HomeResource.Click on the Banking button
     PaymentUser.verify the Banking page open

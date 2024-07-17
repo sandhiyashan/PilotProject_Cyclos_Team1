@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-07-17T09:09:43.064720" rpa="false" schemaversion="5">
+<suite id="s1" name="PilotProject Cyclos Team1-1" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1">
+<suite id="s1-s1" name="TestCases" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases">
+<suite id="s1-s1-s1" name="Test Payment To User" source="C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_payment_to_user.robot">
+<test id="s1-s1-s1-t1" name="To validate payment" line="20">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:47.304429" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-17T09:09:47.303429" elapsed="2.689647"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:49.994076" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-17T09:09:49.994076" elapsed="2.938166"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-17T09:09:52.932242" elapsed="0.125717"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-17T09:09:53.057959" elapsed="0.006252"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:09:47.302433" elapsed="5.762774"/>
+</kw>
+<kw name="To validate payment to user functionality with valid amount">
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-17T09:09:53.068204" elapsed="3.064557"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:56.132761" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:09:56.132761" elapsed="0.163866"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:09:53.068204" elapsed="3.228423"/>
+</kw>
+<kw name="Fill the login form" owner="LoginResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:56.298732" level="INFO">Typing text 'kavi123' into text field 'css:input[placeholder="User"]'.</msg>
+<arg>${username}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:09:56.298732" elapsed="0.168936"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:56.467668" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg time="2024-07-17T09:09:56.550826" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:09:56.467668" elapsed="0.194617"/>
+</kw>
+<arg>kavi123</arg>
+<arg>kavitha</arg>
+<status status="PASS" start="2024-07-17T09:09:56.297729" elapsed="0.364556"/>
+</kw>
+<kw name="click the login button" owner="LoginResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:56.664285" level="INFO">Clicking button 'xpath://button[@class="btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary btn-action-primary"]'.</msg>
+<arg>${submit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:09:56.663284" elapsed="0.094847"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:09:56.663284" elapsed="0.095848"/>
+</kw>
+<kw name="Click on the Banking button" owner="HomeResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Banking}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-17T09:09:56.761130" elapsed="1.870514"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:09:58.632651" level="INFO">Clicking element 'xpath://div[text()='Banking']'.</msg>
+<arg>${Banking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:09:58.631644" elapsed="0.099725"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:09:56.760132" elapsed="1.971237"/>
+</kw>
+<kw name="Select the option payment to user" owner="PaymentUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_payment_to_user}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-17T09:09:58.732378" elapsed="1.569951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:00.303341" level="INFO">Clicking element 'xpath://div[text()="Payment to user"]'.</msg>
+<arg>${select_payment_to_user}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:00.303341" elapsed="0.128320"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:09:58.732378" elapsed="1.699283"/>
+</kw>
+<kw name="verify the payment to user page open" owner="PaymentUser">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:00.433251" level="INFO">Verifying element 'xpath://div[@class="content-title d-flex"]//div' contains exact text 'Payment to user'.</msg>
+<arg>${payment_user_title}</arg>
+<arg>Payment to user</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-17T09:10:00.433251" elapsed="0.595460"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:00.433169" elapsed="0.595542"/>
+</kw>
+<kw name="Enter the username in the to user field" owner="PaymentUser">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:01.032044" level="INFO">Typing text 'dinesh dk' into text field 'xpath://input[@placeholder="Type to search"]'.</msg>
+<arg>${to_User}</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:01.031044" elapsed="0.149413"/>
+</kw>
+<arg>${user_name}</arg>
+<status status="PASS" start="2024-07-17T09:10:01.028711" elapsed="0.152746"/>
+</kw>
+<kw name="Select the user" owner="PaymentUser">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:01.182459" level="INFO">Clicking element 'xpath://div[@class="dropdown-menu show"]//a[1]'.</msg>
+<arg>${select_user}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:01.182459" elapsed="0.985259"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:01.181457" elapsed="0.986261"/>
+</kw>
+<kw name="Enter the valid amount in the amount field" owner="PaymentUser">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:02.170723" level="INFO">Typing text '10' into text field 'xpath://div[@class="input-group"]//input'.</msg>
+<arg>${amount}</arg>
+<arg>${amount_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:02.168718" elapsed="0.143041"/>
+</kw>
+<arg>${amount_data}</arg>
+<status status="PASS" start="2024-07-17T09:10:02.167718" elapsed="0.144041"/>
+</kw>
+<kw name="Click the scheduling dropdown button" owner="PaymentUser">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:02.312758" level="INFO">Clicking element 'xpath://button[@title="Pay now"]'.</msg>
+<arg>${Scheduling}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:02.312758" elapsed="0.734192"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:02.312758" elapsed="0.735192"/>
+</kw>
+<kw name="Click the pay now option" owner="PaymentUser">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:03.048949" level="INFO">Clicking element 'xpath://a[text()=' Pay now ']'.</msg>
+<arg>${pay_now_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:03.048949" elapsed="0.082485"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:03.047950" elapsed="0.084489"/>
+</kw>
+<kw name="Click the next Button in payment page" owner="PaymentUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-17T09:10:03.134438" elapsed="0.034941"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:03.171649" level="INFO">Clicking element 'xpath://action-button[@class="d-inline-block button"]/button'.</msg>
+<arg>${next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:03.169379" elapsed="0.079814"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:03.133439" elapsed="0.115754"/>
+</kw>
+<kw name="Click the confirm button in the payment page" owner="PaymentUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-17T09:10:03.251195" elapsed="0.513021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:03.766221" level="INFO">Clicking element 'xpath://span[text()='Confirm']'.</msg>
+<arg>${confirm_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-17T09:10:03.765221" elapsed="0.082820"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:03.249193" elapsed="0.598848"/>
+</kw>
+<kw name="verify the succesfull payment notification" owner="PaymentUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${successfull_payment_msg}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-17T09:10:03.849040" elapsed="1.497198"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-17T09:10:05.348239" level="INFO">Verifying element 'xpath://div[@class="notification-message"]//div' contains exact text 'The payment was successfully processed'.</msg>
+<arg>${successfull_payment_msg}</arg>
+<arg>The payment was successfully processed</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-17T09:10:05.347241" elapsed="0.044366"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:03.848041" elapsed="1.544073"/>
+</kw>
+<arg>user_name=dinesh dk</arg>
+<arg>amount_data=10</arg>
+<tag>Smoke</tag>
+<doc>To validate the successfull payment notification</doc>
+<status status="PASS" start="2024-07-17T09:09:53.067205" elapsed="12.324977"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-17T09:10:05.393184" elapsed="5.255883"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:10:05.392182" elapsed="5.256885"/>
+</kw>
+<status status="PASS" start="2024-07-17T09:09:47.298429" elapsed="23.350638"/>
+</test>
+<doc>To validate Banking - payment to user Functionality</doc>
+<status status="PASS" start="2024-07-17T09:09:43.165327" elapsed="27.485736"/>
+</suite>
+<status status="PASS" start="2024-07-17T09:09:43.162327" elapsed="27.492735"/>
+</suite>
+<status status="PASS" start="2024-07-17T09:09:43.125994" elapsed="27.530587"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="PilotProject Cyclos Team1-1">PilotProject Cyclos Team1-1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCases">PilotProject Cyclos Team1-1.TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Payment To User">PilotProject Cyclos Team1-1.TestCases.Test Payment To User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

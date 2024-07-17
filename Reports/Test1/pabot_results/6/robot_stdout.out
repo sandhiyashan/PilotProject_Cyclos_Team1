@@ -1,0 +1,20 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test User Payment :: To validate Banking - payment to user Functi...
+==============================================================================
+To validate payment to user functionality with valid data :: Valid... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank user name :: ... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank amount field ... | PASS |
+------------------------------------------------------------------------------
+To validate payment to user functionality with blank fields :: Val... | PASS |
+------------------------------------------------------------------------------
+TestCases.Test User Payment :: To validate Banking - payment to us... | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test1\pabot_results\6\output.xml

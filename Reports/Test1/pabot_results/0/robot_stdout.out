@@ -1,0 +1,67 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Advertisement :: To validate Advertisement Functionality       
+==============================================================================
+verify that the valid keyword is entered in the keyword field :: V... | PASS |
+------------------------------------------------------------------------------
+verify that the Invalid keyword is entered in the keyword field ::... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+verify the wishlist functionality :: To validate the wishlist func...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:102
+    T:  verify the wishlist functionality    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:112
+      click the element donut    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\AdvertisementResource.robot:124
+      Click Element    ${donut}
+      |  ${donut} = xpath://div[text()=" Donuts "] (str)
+______________________________________________________________________________
+| FAIL |
+StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7950CEEA2+31554]
+	(No symbol) [0x00007FF795047ED9]
+	(No symbol) [0x00007FF794F0872A]
+	(No symbol) [0x00007FF794F0E55E]
+	(No symbol) [0x00007FF794F10EB1]
+	(No symbol) [0x00007FF794F10F50]
+	(No symbol) [0x00007FF794F5A48C]
+	(No symbol) [0x00007FF794F4C006]
+	(No symbol) [0x00007FF794F7D02A]
+	(No symbol) [0x00007FF794F4BA76]
+	(No symbol) [0x00007FF794F7D240]
+	(No symbol) [0x00007FF794F9C977]
+	(No symbol) [0x00007FF794F7CDD3]
+	(No symbol) [0x00007FF794F4A33B]
+	(No symbol) [0x00007FF794F4AED1]
+	GetHandleVerifier [0x00007FF7953D8B1D+3217341]
+	GetHandleVerifier [0x00007FF795425AE3+3532675]
+	GetHandleVerifier [0x00007FF79541B0E0+3489152]
+	GetHandleVerifier [0x00007FF79517E776+750614]
+	(No symbol) [0x00007FF79505375F]
+	(No symbol) [0x00007FF79504EB14]
+	(No symbol) [0x00007FF79504ECA2]
+	(No symbol) [0x00007FF79503E16F]
+	BaseThreadInitThunk [0x00007FFFACEC257D+29]
+	RtlUserThreadStart [0x00007FFFAE00AA48+40]
+------------------------------------------------------------------------------
+TestCases.Test Advertisement :: To validate Advertisement Function... | FAIL |
+7 tests, 6 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+7 tests, 6 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test1\pabot_results\0\output.xml

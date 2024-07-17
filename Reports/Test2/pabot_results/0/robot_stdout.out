@@ -1,0 +1,40 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Advertisement :: To validate Advertisement Functionality       
+==============================================================================
+verify that the valid keyword is entered in the keyword field :: V... | PASS |
+------------------------------------------------------------------------------
+verify that the Invalid keyword is entered in the keyword field ::... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:57
+    T:  Verify the advertisements functionality with dropdownlist order by last published    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\TestCases\test_advertisement.robot:60
+      Go to Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Resources\HomeResource.robot:30
+      Wait Until Element Is Visible    ${login_btn}
+      |  ${login_btn} = xpath:(//div[@class="ml-2"])[3] (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath:(//div[@class="ml-2"])[3]' not visible after 5 seconds.
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+verify the wishlist functionality :: To validate the wishlist func... | PASS |
+------------------------------------------------------------------------------
+TestCases.Test Advertisement :: To validate Advertisement Function... | FAIL |
+7 tests, 6 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+7 tests, 6 passed, 1 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test2\pabot_results\0\output.xml

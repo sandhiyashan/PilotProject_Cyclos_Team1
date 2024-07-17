@@ -1,0 +1,26 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Advertisement :: To validate Advertisement Functionality       
+==============================================================================
+verify that the valid keyword is entered in the keyword field :: V... | PASS |
+------------------------------------------------------------------------------
+verify that the Invalid keyword is entered in the keyword field ::... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+Verify the advertisements functionality with dropdownlist order by... | PASS |
+------------------------------------------------------------------------------
+verify the wishlist functionality :: To validate the wishlist func... | PASS |
+------------------------------------------------------------------------------
+TestCases.Test Advertisement :: To validate Advertisement Function... | PASS |
+7 tests, 7 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+7 tests, 7 passed, 0 failed
+==============================================================================
+Output:  C:\Users\ASUS\Desktop\PilotProject_Cyclos_Team1-1\Reports\Test\pabot_results\0\output.xml

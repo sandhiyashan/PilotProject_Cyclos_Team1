@@ -14,12 +14,13 @@ ${invalid_keyword}
 
 *** Test Cases ***
 Validate Business Directory functionality with invalid data    ${invalid_keyword}
-    [Tags]  smoke
+    
     
 *** Keywords ***
 To Validate the Business Directory functionality with invalid data
     [Documentation]    This checks the Business Directory functionality with invalid data
     [Arguments]    ${invalid_keyword}
+    [Tags]  smoke
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    demo    1234
     LoginResource.click the login button

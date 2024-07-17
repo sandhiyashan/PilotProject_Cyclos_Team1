@@ -17,11 +17,12 @@ ${description}
 
 *** Test Cases ***
 Validate Receive payment with valid data    ${user}    ${amount}    ${description}
-    [Tags]  smoke
+    
 *** Keywords ***
 Validate the Receive payment functionality with valid data
     [Documentation]    This checks the Receive payment functionality with valid data
     [Arguments]    ${user}    ${amount}    ${description}
+    [Tags]  smoke
     HomeResource.Go to Login Page
     LoginResource.click the login button
     LoginResource.Fill the login form    sandhiyas    Sand@123

@@ -20,6 +20,7 @@ Validate add to contact in Business Directory functionality    ${valid_keyword}
 To Validate the add to contact in Business Directory functionality
     [Documentation]    This checks the add to contact in Business Directory functionality
     [Arguments]    ${valid_keyword}
+    [Tags]  regression
     HomeResource.Go to Login Page
     LoginResource.Fill the login form    dharun    1234
     LoginResource.click the login button

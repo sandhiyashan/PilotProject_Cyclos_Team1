@@ -35,6 +35,7 @@ verify that the Invalid keyword is entered in the keyword field
     AdvertisementResource.Click on the advertisement page button
     Sleep    5
     AdvertisementResource.Enter the invalid Keyword in the keyword box
+    Sleep    3
     AdvertisementResource.verify the invalid keyword error message is displayed
 
 
